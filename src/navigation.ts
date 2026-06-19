@@ -33,7 +33,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'TrendTrack Promo Code',
+      title: 'Product',
       links: [
         { text: 'Promo Code', href: '/#promo-code' },
         { text: 'Features', href: '/#features' },
@@ -61,8 +61,7 @@ export const footerData = {
     },
   ],
   secondaryLinks: [
-    { text: 'Terms', href: getPermalink('/terms') },
-    { text: 'Privacy Policy', href: getPermalink('/privacy') },
+    { text: 'TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform for your next million-dollar win.'},
   ],
   socialLinks: [
     { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
@@ -72,6 +71,6 @@ export const footerData = {
     { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
   ],
   footNote: `
-    © 2026 TrendTrack. All rights reserved.
+    © 2026 TrendTrack Promo Code. All rights reserved.
   `,
 };
