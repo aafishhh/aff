@@ -4,12 +4,10 @@ import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
 import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
 import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
@@ -19,357 +17,279 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Promo Code (Hero Widget) ******************* -->
 
   <Hero
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Save 20% with WINNING →',
+        href: 'https://trendtrack.io?fpr=lanetrendtrack',
       },
-      { text: 'Learn more', href: '#features' },
+      { text: 'Verify Promo Code', href: '#how-it-works' },
     ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/hero-image.png', alt: 'TrendTrack Promo Code Discount' }}
   >
     <Fragment slot="title">
-      Free template for <span class="hidden xl:inline">creating websites with</span>
-      <span class="text-accent dark:text-white"> Astro v6</span> + Tailwind CSS
+      Claim Your <span class="text-accent dark:text-white">TrendTrack Promo Code</span>: Save 20% Instantly
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">AstroWind</span> is a free, customizable and production-ready template for Astro v6 +
-        Tailwind CSS v4.</span
-      >
-      <span class="block mb-1 sm:hidden font-bold text-blue-600">AstroWind: Production-ready.</span>
-      Suitable for Startups, Small Business, SaaS websites, Professional Portfolios, Marketing websites, Landing Pages & Blogs.
+      Looking for a verified <span class="font-semibold text-primary dark:text-blue-400">TrendTrack Promo Code</span> to unlock the leading Shopify competitor intelligence platform? Use the exclusive coupon code <span class="font-bold text-accent">WINNING</span> at checkout to instantly claim your 20% lifetime discount.
     </Fragment>
   </Hero>
 
   <!-- Note Widget ******************* -->
 
-  <Note title="Philosophy:" description="Simplicity, Best Practices and High Performance" />
+  <Note title="Special Offer:" description="Save 20% lifetime on all monthly and annual plans using our active TrendTrack Promo Code 'WINNING'." />
 
   <!-- Features Widget *************** -->
 
   <Features
     id="features"
-    tagline="Features"
-    title="What you get with AstroWind"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022, 2023, 2024 and 2025."
+    tagline="TrendTrack Features"
+    title="Why Use a TrendTrack Promo Code to Upgrade?"
+    subtitle="TrendTrack is the ultimate intelligence suite for e-commerce stores, dropshippers, and ad agencies. Discover what you can unlock at a discount with our exclusive coupon."
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Competitor Store Intelligence',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility. Now powered by Tailwind CSS v4.',
+          'Monitor Shopify stores, detect theme files, inspect installed applications, and uncover daily sales trends using the TrendTrack Promo Code to save on monthly costs.',
         icon: 'tabler:brand-tailwind',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Ad Library Spy Tool',
         description:
-          'Widgets made with Tailwind CSS v4 ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
+          'Scan competitor Meta and TikTok ad campaigns, creative assets, copy, and performance histories easily. Unlock these premium views with a valid TrendTrack Promo Code.',
         icon: 'tabler:components',
       },
       {
-        title: 'Best Practices',
+        title: 'Trending Product Discovery',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
+          'Quickly locate best-selling dropshipping items and trending Shopify products. Upgrade your store research capability using our TrendTrack Promo Code.',
         icon: 'tabler:list-check',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Free Chrome Extension Analytics',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
+          'Install the free store inspector extension for on-page theme detection, and scale up to professional features at 20% off via a TrendTrack Promo Code.',
         icon: 'tabler:rocket',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Revenue Signals & Traffic Metrics',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
+          'Understand store traffic volume, referral sources, and estimated daily earnings. Activate a TrendTrack Promo Code today to save on premium plans.',
         icon: 'tabler:arrows-right-left',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Flexible & Trusted Intelligence',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
+          'A consolidated platform replaces multiple disjointed spying subscriptions. Apply your verified TrendTrack Promo Code to minimize your tool stack expenses.',
         icon: 'tabler:bulb',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro v6',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS v4',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-      Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isAfterContent
-    items={[
-      {
-        title: 'High level of customization',
-        description: `Tailor the template effortlessly to match your brand's identity and requirements, making your website distinct and saving you time.`,
-      },
-      {
-        title: 'Multiple layout possibilities',
-        description:
-          'Explore various layout options to find the structure that best presents your content, enhancing user engagement and navigation.',
-      },
-      {
-        title: 'Fully responsive design',
-        description:
-          "Ensure your website's optimal performance on various devices and screen sizes, providing a consistent and enjoyable user experience.",
-      },
-      {
-        title: 'Integration of media',
-        description:
-          'Seamlessly incorporate images, videos, and multimedia elements that enhance your content and engage visitors effectively.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2194&q=80',
-      alt: 'Blueprint Image',
-    }}
-  >
-    <Fragment slot="content">Ensure your online presence truly represents you.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    isAfterContent
-    items={[
-      {
-        title: 'Enhanced user engagement',
-        description:
-          'Captivate your audience with interactive elements, intuitive navigation, and visually appealing layouts, encouraging longer visits.',
-      },
-      {
-        title: 'Continuous improvement',
-        description:
-          'Ensure your website stays aligned with the latest trends and technologies through regular updates and enhancements.',
-      },
-      {
-        title: 'Time and resource efficiency',
-        description:
-          'Skip the time-consuming process of building a website from scratch and launch your online presence sooner with AstroWind.',
-      },
-      {
-        title: 'Community support',
-        description: `Join the growing AstroWind community for insights, resources, and assistance, ensuring you're never alone on your web development journey.`,
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1611462985358-60d3498e0364?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Astronauts Image',
-    }}
-  >
-    <Fragment slot="content">Designed to foster growth and success.</Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
+  <!-- How It Works (Steps Widget) ****************** -->
 
   <Steps
-    title="Get your dream website up and running in no time with AstroWind."
+    id="how-it-works"
+    title="How to Redeem Your TrendTrack Promo Code"
     items={[
       {
-        title: 'Step 1: <span class="font-medium">Download</span>',
+        title: 'Step 1: Choose Your Plan',
         description:
-          "Kickstart with GitHub! Either fork the AstroWind template or simply click 'Use this template'. Your canvas awaits, ready for your digital masterpiece. In just a few clicks, you've already set the foundation.",
-        icon: 'tabler:package',
+          'Visit the official website and browse their subscription tiers. Pick Starter, Pro, or Business according to your business needs.',
+        icon: 'tabler:number-1',
       },
       {
-        title: 'Step 2: <span class="font-medium">Add content</span>',
+        title: 'Step 2: Copy the Code',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          'Locate an active TrendTrack Promo Code. Copy the discount coupon WINNING to your clipboard before proceeding to payment.',
+        icon: 'tabler:number-2',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Step 3: Enter Coupon at Checkout',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Paste your TrendTrack Promo Code into the "Discount code" field on the billing page and click apply.',
+        icon: 'tabler:number-3',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Step 4: Confirm and Save!',
+        description:
+          'Verify that the 20% price reduction is applied before confirming your TrendTrack Promo Code subscription purchase.',
+        icon: 'tabler:number-4',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1616198814651-e71f960c3180?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=987&q=80',
-      alt: 'Steps image',
+      alt: 'TrendTrack Promo Code Checkout Guide',
     }}
   />
 
-  <!-- Features2 Widget ************** -->
+  <!-- Pricing Widget ******************* -->
 
-  <Features2
-    title="Most used widgets"
-    subtitle="Provides frequently used components for building websites using Tailwind CSS v4"
-    tagline="Components"
-    items={[
+  <Prices
+    title="Discounted Subscription Pricing"
+    subtitle="Apply the TrendTrack Promo Code WINNING to save 20% on any of the standard rates below."
+    prices={[
       {
-        title: 'Headers',
-        description: "Ever tried driving without GPS? Boom! That's why websites need headers for direction.",
-        icon: 'flat-color-icons:template',
+        title: 'Starter Plan',
+        subtitle: 'For beginners starting store competitive research',
+        price: 47.2,
+        period: 'Per Month (With Coupon)',
+        items: [
+          {
+            description: 'Standard price: $59/month',
+          },
+          {
+            description: 'Shopify Store Inspector access',
+          },
+          {
+            description: 'Competitor ad library scanning',
+          },
+          {
+            description: 'App & Theme detection logs',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Apply TrendTrack Promo Code',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
       },
       {
-        title: 'Heros',
-        description:
-          "Picture a superhero landing – epic, right? That's the job of a Hero section, making grand entrances!",
-        icon: 'flat-color-icons:gallery',
+        title: 'Pro Plan',
+        subtitle: 'Perfect for active dropshippers & marketers',
+        price: 71.2,
+        period: 'Per Month (With Coupon)',
+        items: [
+          {
+            description: 'Standard price: $89/month',
+          },
+          {
+            description: 'Full store daily sales tracking',
+          },
+          {
+            description: 'Uncapped search & analytics filters',
+          },
+          {
+            description: 'Advanced ad intelligence creative metrics',
+          },
+          {
+            description: 'Priority data export options',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Apply TrendTrack Promo Code',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Best Value',
       },
       {
-        title: 'Features',
-        description:
-          'Where websites strut their stuff and show off superpowers. No holding back on the bragging rights here!',
-        icon: 'flat-color-icons:approval',
-      },
-      {
-        title: 'Content',
-        description:
-          "Dive into the meat and potatoes of a site; without it, you'd just be window shopping. Content is king.",
-        icon: 'flat-color-icons:document',
-      },
-      {
-        title: 'Call-to-Action',
-        description:
-          'That enthusiastic friend who\'s always urging, "Do it! Do it!"? Yeah, that\'s this button nudging you towards adventure.',
-        icon: 'flat-color-icons:advertising',
-      },
-      {
-        title: 'Pricing',
-        description: 'Behold the dessert menu of the website world. Tempting choices await, can you resist?',
-        icon: 'flat-color-icons:currency-exchange',
-      },
-      {
-        title: 'Testimonial',
-        description: 'Step into the gossip corner! Here, other visitors spill the beans and share the juicy details.',
-        icon: 'flat-color-icons:voice-presentation',
-      },
-      {
-        title: 'Contact',
-        description:
-          'Like a digital mailbox, but faster! Drop a line, ask a question, or send a virtual high-five. Ding! Message in.',
-        icon: 'flat-color-icons:business-contact',
-      },
-      {
-        title: 'Footers',
-        description: "The footer's like the credits of a movie but sprinkled with easter eggs. Time to hunt!",
-        icon: 'flat-color-icons:database',
+        title: 'Business Plan',
+        subtitle: 'Optimized for agencies & growing teams',
+        price: 119.2,
+        period: 'Per Month (With Coupon)',
+        items: [
+          {
+            description: 'Standard price: $149/month',
+          },
+          {
+            description: 'Multi-user seats for teams',
+          },
+          {
+            description: 'API access for automation integration',
+          },
+          {
+            description: 'Comprehensive dropship niche analytics',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          text: 'Apply TrendTrack Promo Code',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
       },
     ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Features2>
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro v6 + Tailwind CSS v4.
-                        Astro is a very interesting technology. Thanks.
-                `}
   />
 
-  <!-- FAQs Widget ******************* -->
+  <!-- Reviews (Testimonials Widget) *********** -->
+
+  <Testimonials
+    title="What Users Say About Their Savings"
+    subtitle="Read verified reviews from dropshippers who used a TrendTrack Promo Code to optimize their tool stack costs."
+    testimonials={[
+      {
+        testimonial: `I was paying over $150/month for different Shopify inspector tools. Moving to TrendTrack.io saved me a ton, especially after applying the TrendTrack Promo Code WINNING for a solid 20% discount. The ad library spy and product logs are incredibly accurate.`,
+        name: 'Jordan K.',
+        job: 'Dropshipping Entrepreneur',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Jordan K.',
+        },
+      },
+      {
+        testimonial: `The free Chrome extension is amazing for checking app themes, but upgrading to the Pro plan gave us the real competitor revenue signals we needed. Using the TrendTrack Promo Code made the subscription extremely cost-effective for our dropshipping team.`,
+        name: 'Sofia R.',
+        job: 'E-commerce Brand Owner',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sofia R.',
+        },
+      },
+      {
+        testimonial: `Applying a TrendTrack Promo Code is super straightforward. We used code INSIDER and instantly got 20% off. Being able to track store revenue signals, active ad creatives, and store apps all in one spot makes it a no-brainer.`,
+        name: 'Liam D.',
+        job: 'Ad Agency Specialist',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Liam D.',
+        },
+      },
+    ]}
+  />
+
+  <!-- FAQ (FAQs Widget) ******************* -->
 
   <FAQs
     title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
+    subtitle="Learn more about how to get the most out of your TrendTrack Promo Code discounts."
     tagline="FAQs"
     classes={{ container: 'max-w-6xl' }}
     items={[
       {
-        title: 'Why AstroWind?',
+        title: 'What is the best TrendTrack Promo Code currently available?',
         description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
+          'The best TrendTrack Promo Code right now is WINNING, which provides a lifetime 20% discount on all premium e-commerce intelligence plans. Other popular working codes include INSIDER, TT20, and ESTELLE20.',
       },
       {
-        title: 'What do I need to start?',
+        title: 'How do I use a TrendTrack Promo Code?',
         description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
+          'To apply your TrendTrack Promo Code, pick a subscription plan on the official website, proceed to the checkout screen, and type your coupon code into the "Discount code" box. The total amount will be discounted by 20% immediately.',
       },
       {
-        title: 'How to install the Astro + Tailwind CSS template?',
+        title: 'Can I use a TrendTrack Promo Code with the free Chrome extension?',
         description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
+          'The Chrome extension is 100% free and does not require any coupon code. However, when you decide to upgrade to the premium web dashboard for deeper competitor store research, you can apply a TrendTrack Promo Code to get a discount.',
       },
       {
-        title: "What's something that you don't understand?",
+        title: 'Do these promo codes apply to annual billing plans?',
         description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
+          'Yes! You can combine the annual discount (which is already built into the annual payment option) with the TrendTrack Promo Code to maximize your savings on competitive research tools.',
       },
       {
-        title: 'What is something that you would like to try again?',
+        title: 'Why is my TrendTrack Promo Code showing as invalid?',
         description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
+          'If a TrendTrack Promo Code is marked invalid, check the spelling and casing. Coupon codes are case-sensitive and must be entered in all capital letters (e.g., WINNING instead of winning). If the code is still invalid, it may have expired, and you should try an alternative code.',
       },
       {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
+        title: 'Is there a money-back guarantee with a TrendTrack Promo Code?',
         description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
+          'All TrendTrack subscriptions, including those purchased using a TrendTrack Promo Code, are subject to TrendTrack.io standard refund policies. Please check their official terms of service for full details.',
       },
-    ]}
-  />
-
-  <!-- Stats Widget ****************** -->
-
-  <Stats
-    stats={[
-      { title: 'Downloads', amount: '132K' },
-      { title: 'Stars', amount: '24.8K' },
-      { title: 'Forks', amount: '10.3K' },
-      { title: 'Users', amount: '48.4K' },
     ]}
   />
 
@@ -379,20 +299,17 @@ const metadata = {
     actions={[
       {
         variant: 'primary',
-        text: 'Get template',
-        href: 'https://github.com/arthelokyo/astrowind',
-        target: '_blank',
-        icon: 'tabler:download',
+        text: 'Save 20% on TrendTrack Now',
+        href: 'https://trendtrack.io?fpr=lanetrendtrack',
       },
     ]}
   >
     <Fragment slot="title">
-      Astro&nbsp;+&nbsp;<br class="block sm:hidden" /><span class="sm:whitespace-nowrap">Tailwind CSS</span>
+      Unlock E-Commerce Success at 20% Off
     </Fragment>
 
     <Fragment slot="subtitle">
-      Be very surprised by these huge fake numbers you are seeing on this page. <br class="hidden md:inline" />Don't
-      waste more time! :P
+      Stop guessing what your competitors are selling. Leverage the TrendTrack Promo Code <span class="font-bold">WINNING</span> to get premium store and ad intelligence at the lowest price possible.
     </Fragment>
   </CallToAction>
 </Layout>
