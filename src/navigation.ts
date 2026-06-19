@@ -26,14 +26,6 @@ export const headerData = {
       text: 'FAQ',
       href: getPermalink('/#faq'),
     },
-    {
-      text: 'Alternatives',
-      href: getPermalink('/alternatives'),
-    },
-    {
-      text: 'Blog',
-      href: getBlogPermalink(),
-    },
   ],
   actions: [{ text: 'Save 20% with WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' }],
 };
