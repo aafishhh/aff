@@ -2,7 +2,7 @@ site:
   name: TrendTrack Promo Code
   site: 'https://trendtrackpromocode.com/'
   base: '/'
-  trailingSlash: false
+  trailingSlash: 'always'
 
   googleSiteVerificationId: orcPxI47GSa-cRvY11tUe6iGg2IO_RPvnA1q95iEM3M
 
@@ -11,7 +11,7 @@ metadata:
   title:
     default: TrendTrack Promo Code
     template: '%s — TrendTrack Promo'
-  description: "TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform and master the ad research strategy behind your next million-dollar win."
+  description: "TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform and master the strategy for your next million-dollar win."
   robots:
     index: true
     follow: true
