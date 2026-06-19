@@ -35,7 +35,7 @@ export const headerData = {
       href: getBlogPermalink(),
     },
   ],
-  actions: [{ text: 'Get Started', href: '#', variant: 'primary' }],
+  actions: [{ text: 'Save 20% with WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' }],
 };
 
 export const footerData = {
