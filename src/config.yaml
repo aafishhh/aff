@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: TrendTrack Promo Code
+  site: 'https://trendtrackpromocode.com/'
   base: '/'
   trailingSlash: false
 
@@ -9,14 +9,14 @@ site:
 # Default SEO metadata
 metadata:
   title:
-    default: AstroWind
-    template: '%s — AstroWind'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+    default: TrendTrack Promo Code
+    template: '%s — TrendTrack Promo'
+  description: "TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform and master the ad research strategy behind your next million-dollar win."
   robots:
     index: true
     follow: true
   openGraph:
-    site_name: AstroWind
+    site_name: TrendTrack Promo Code
     images:
       - url: '~/assets/images/default.png'
         width: 1200
