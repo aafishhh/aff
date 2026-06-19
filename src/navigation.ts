@@ -33,7 +33,7 @@ export const headerData = {
 export const footerData = {
   links: [
     {
-      title: 'Quick Links',
+      title: 'TrendTrack Promo Code',
       links: [
         { text: 'Promo Code', href: '/#promo-code' },
         { text: 'Features', href: '/#features' },
@@ -48,16 +48,15 @@ export const footerData = {
       links: [
         { text: 'Alternatives', href: getPermalink('/alternatives') },
         { text: 'Blog', href: getBlogPermalink() },
-        { text: 'About Us', href: '#' },
-        { text: 'Contact Us', href: '#' },
       ],
     },
     {
-      title: 'Legal',
+      title: 'About',
       links: [
         { text: 'Privacy Policy', href: getPermalink('/privacy') },
         { text: 'Terms of Service', href: getPermalink('/terms') },
-        { text: 'Subscription Policies', href: '#' },
+        { text: 'About Us', href: '/about' },
+        { text: 'Contact Us', href: '/contact' },
       ],
     },
   ],
