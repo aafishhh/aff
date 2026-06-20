@@ -1,14 +1,18 @@
 ---
+
+import { SITE } from 'astrowind:config';
+
 ---
 
-<!-- 添加了 -ml-2 来强制向左偏移 -->
-<a href="/" class="flex items-center flex-shrink-0 -ml-2 md:-ml-4">
-  <img 
-    src="/logo.png" 
-    alt="TrendTrack Logo" 
-    class="h-8 w-8 object-cover rounded-md" 
-  />
-  <span class="ml-2 hidden md:block text-lg font-bold text-gray-900 whitespace-nowrap dark:text-white">
-    TrendTrack Promo Code
-  </span>
-</a>
+
+
+<span
+
+  class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white"
+
+>
+
+  🚀 {SITE?.name}
+
+</span> 
+
