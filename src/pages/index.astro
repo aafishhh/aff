@@ -37,24 +37,29 @@ const metadata = {
     TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform for your next million-dollar win.
   </Fragment>
 
-  <Fragment slot="actions">
-    <!-- 优惠卡片放在这里，Hero 会自动把它放在标题下方 -->
-    <div class="mt-8 border-2 border-[#9FE870] rounded-2xl p-6 bg-white shadow-lg max-w-sm">
-      <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
-      <h2 class="text-4xl font-extrabold text-[#163300] my-2 tracking-tight">WINNING</h2>
-      <p class="text-sm font-medium text-gray-600 mb-4">20% off all plans</p>
+<Fragment slot="actions">
+    <!-- 优惠卡片：宽度设置为 w-[300px]，显得更聚焦且大气 -->
+    <div class="mt-8 border-2 border-[#9FE870] rounded-2xl p-8 bg-white shadow-xl w-[300px] mx-auto">
+      <p class="text-[16px] font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
       
+      <!-- WINNING 字体大小设为 50px -->
+      <h2 class="text-[50px] font-extrabold text-[#163300] my-3 leading-none tracking-tight">WINNING</h2>
+      
+      <p class="text-[18px] font-medium text-gray-600 mb-6">20% off all plans</p>
+      
+      <!-- 复制按钮 -->
       <button 
         onclick="navigator.clipboard.writeText('WINNING'); alert('Code Copied!')"
-        class="w-full py-2 mb-2 border border-gray-400 rounded-lg text-sm font-semibold hover:bg-gray-50 transition cursor-pointer"
+        class="w-full py-3 mb-3 border border-gray-400 rounded-lg text-[16px] font-semibold hover:bg-gray-50 transition cursor-pointer"
       >
         📋 Copy code WINNING
       </button>
 
+      <!-- 激活折扣按钮 -->
       <a 
         href="https://trendtrack.io?fpr=lanetrendtrack" 
         target="_blank"
-        class="block w-full py-3 bg-[#9FE870] text-[#163300] font-bold text-center rounded-lg hover:opacity-90 transition"
+        class="block w-full py-4 bg-[#9FE870] text-[#163300] font-bold text-[18px] text-center rounded-lg hover:opacity-90 transition"
       >
         Activate discount →
       </a>
