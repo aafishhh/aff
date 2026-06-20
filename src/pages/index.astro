@@ -20,16 +20,30 @@ const metadata = {
   <!-- Promo Code (Hero Widget) ******************* -->
 
   <Hero
-    actions={[
-      {
-        variant: 'primary',
-        text: 'Save 20% with WINNING →',
-        href: 'https://trendtrack.io?fpr=lanetrendtrack',
-      },
-      { text: 'Verify Promo Code', href: '#promo-code' },
-    ]}
-    image={{ src: '~/assets/images/hero-image.png', alt: 'TrendTrack Promo Code Discount' }}
-  >
+    <Fragment slot="actions">
+        <div class="flex flex-col gap-4 mt-6">
+          <div class="border-2 border-[#9FE870] rounded-2xl p-6 bg-white shadow-lg max-w-sm mx-auto text-center">
+            <p class="text-xs font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
+            <h2 class="text-4xl font-extrabold text-[#163300] my-2 tracking-tight">WINNING</h2>
+            <p class="text-sm font-medium text-gray-600 mb-4">20% off all plans</p>
+            
+            <button 
+              onclick="navigator.clipboard.writeText('WINNING'); alert('Code Copied!')"
+              class="w-full py-2 mb-2 border border-gray-200 rounded-lg text-sm font-semibold hover:bg-gray-50 transition cursor-pointer"
+            >
+              📋 Copy code WINNING
+            </button>
+    
+            <a 
+              href="https://trendtrack.io?fpr=lanetrendtrack" 
+              target="_blank"
+              class="block w-full py-3 bg-[#9FE870] text-[#163300] font-bold rounded-lg hover:opacity-90 transition"
+            >
+              Activate discount →
+            </a>
+          </div>
+        </div>
+      </Fragment>
     <Fragment slot="title">
       <span class="block mb-4">TrendTrack Promo Code</span>
       
