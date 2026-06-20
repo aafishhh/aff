@@ -50,7 +50,12 @@
 }
 
 @utility text-muted {
-  color: var(--aw-color-text-muted);
+  /* 修改这里，统一控制全站所有副标题/描述文字的样式 */
+  color: var(--aw-color-text-muted); /* 保持原有颜色变量 */
+  font-size: 16px;                   /* 统一字体大小 */
+  line-height: 1.75;                 /* 统一行高，增加舒适度 */
+  margin-top: 1rem;                  /* 统一上方间距 */
+  margin-bottom: 2rem;               /* 统一下方间距 */
 }
 
 @utility btn {
