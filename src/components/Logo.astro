@@ -2,13 +2,14 @@
 import { SITE } from 'astrowind:config';
 ---
 
-<a href="/" class="flex items-center">
+<!-- 添加了 -ml-4 类，这会强制整个 Logo 块向左平移 -->
+<a href="/" class="flex items-center -ml-8">
   <img 
     src="/sitelogo.png" 
     alt={SITE?.name} 
     class="h-8 w-8 object-cover rounded-md" 
   />
-  <span class="self-center ml-2 rtl:ml-0 rtl:mr-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
+  <span class="ml-2 text-2xl md:text-xl font-bold text-gray-900 whitespace-nowrap dark:text-white">
     TrendTrack Promo Code
   </span>
 </a>
