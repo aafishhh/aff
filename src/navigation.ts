@@ -28,13 +28,8 @@ export const headerData = {
     },
   ],
 actions: [
-  { 
-    text: 'Save 20% with WINNING →', 
-    href: 'https://trendtrack.io?fpr=lanetrendtrack', 
-    variant: 'primary',
-    target: '_blank' // 添加这一行即可实现新窗口打开
-  }
-];
+  { text: 'Save 20% with WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' }],
+};
 
 export const footerData = {
   links: [
