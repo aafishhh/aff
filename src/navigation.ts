@@ -65,11 +65,8 @@ export const footerData = {
     { text: 'TrendTrack Promo Code: WINNING – Get a verified 20% OFF Discount in June 2026. Unlock the #1 ecommerce analytics platform for your next million-dollar win.'},
   ],
   socialLinks: [
-    { ariaLabel: 'X', icon: 'tabler:brand-x', href: '#' },
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: '#' },
-    { ariaLabel: 'Facebook', icon: 'tabler:brand-facebook', href: '#' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: '#' },
-    { ariaLabel: 'Github', icon: 'tabler:brand-github', href: '#' },
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/Trendtrack_io' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/trendtrack_io?igsh=dW14aW01MjA4bDI1' },
   ],
   footNote: `
     © 2026 TrendTrack Promo Code. All rights reserved.
