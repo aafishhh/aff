@@ -40,19 +40,19 @@ const metadata = {
 <Fragment slot="actions">
     <!-- 优惠卡片：宽度设置为 w-[300px]，显得更聚焦且大气 -->
     <div class="mt-8 border-2 border-[#9FE870] rounded-2xl p-8 bg-white shadow-xl w-[300px] mx-auto">
-      <p class="text-[16px] font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
+      <p class="text-[12px] font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
       
       <!-- WINNING 字体大小设为 50px -->
       <h2 class="text-[50px] font-extrabold text-[#163300] my-3 leading-none tracking-tight">WINNING</h2>
       
-      <p class="text-[18px] font-medium text-gray-600 mb-6">20% off all plans</p>
+      <p class="text-[16px] font-medium text-gray-600 mb-6">20% off all plans</p>
       
       <!-- 复制按钮 -->
       <button 
         onclick="navigator.clipboard.writeText('WINNING'); alert('Code Copied!')"
-        class="w-full py-3 mb-3 border border-gray-400 rounded-lg text-[16px] font-semibold hover:bg-gray-50 transition cursor-pointer"
+        class="w-full py-3 mb-3 border border-gray-400 rounded-lg text-[18px] font-semibold hover:bg-gray-50 transition cursor-pointer"
       >
-        📋 Copy code WINNING
+        Copy code WINNING
       </button>
 
       <!-- 激活折扣按钮 -->
@@ -63,7 +63,17 @@ const metadata = {
       >
         Activate discount →
       </a>
-    </div>
+
+      <div class="flex items-center justify-between pt-6 border-t border-gray-100">
+              <div class="flex items-center gap-2 text-gray-600 text-[14px]">
+                <span>📋</span> 127 copies today
+              </div>
+              <div class="flex flex-col items-center border border-gray-200 rounded-lg px-3 py-1">
+                <span class="text-[16px]">👍</span>
+                <span class="text-[14px] font-bold text-gray-700">78</span>
+              </div>
+            </div>
+          </div>
   </Fragment>
 </Hero>
 
