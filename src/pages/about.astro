@@ -7,216 +7,222 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About TrendTrack Promo Code',
-  description:
-    'Learn more about TrendTrack Promo Code — your trusted source for verified promo codes, SaaS discounts, and online savings tools.',
+  title: 'About us',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Section -->
+  <!-- Hero Widget ******************* -->
+
   <Hero
     tagline="About TrendTrack Promo Code"
     image={{
       src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80',
-      alt: 'Online savings and digital marketing concept',
+      alt: 'TrendTrack Promo Code savings and deals',
     }}
   >
     <Fragment slot="title">
-      Save more online with <br />
-      <span class="text-accent dark:text-white">Verified Promo Codes & Deals</span>
+      Helping you save more with verified <br />
+      <span class="text-accent dark:text-white">Promo Codes & Exclusive Deals</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      TrendTrack Promo Code is built to help users discover verified discount codes, SaaS deals, and marketing tool
-      promotions in one place. We focus on accuracy, simplicity, and helping users save money while using the best
-      digital tools online.
+      TrendTrack Promo Code is a deal discovery platform that helps users find the latest discounts, coupon codes,
+      and promotional offers across popular SaaS tools and online services. Our goal is simple — make online tools
+      more affordable and accessible for everyone by collecting and organizing the best available deals in one place.
     </Fragment>
   </Hero>
 
-  <!-- Stats Section -->
+  <!-- Stats Widget ****************** -->
+
   <Stats
-    title="Why users trust us"
+    title="Our platform impact"
     stats={[
-      { title: 'Verified Deals', amount: '100+' },
-      { title: 'Updated Weekly', amount: '7D' },
-      { title: 'Tools Covered', amount: '50+' },
-      { title: 'Savings Focus', amount: '24/7' },
+      { title: 'Deal Updates', amount: 'Daily' },
+      { title: 'Supported Tools', amount: '50+' },
+      { title: 'Active Coupons', amount: '100+' },
+      { title: 'User Focus', amount: 'Global' },
     ]}
   />
 
-  <!-- Core Value Features -->
+  <!-- Features3 Widget ************** -->
+
   <Features3
-    title="What we provide"
-    subtitle="We focus on curated, high-quality promo codes and digital tool discounts to help users save time and money."
+    title="What we offer"
+    subtitle="We focus on delivering high-quality, easy-to-use deal discovery experiences for users looking to save money on digital tools and subscriptions."
     columns={3}
     isBeforeContent={true}
     items={[
       {
         title: 'Verified Promo Codes',
         description:
-          'We aim to list only active and tested promo codes to reduce user frustration and expired coupon clicks.',
+          'We collect and organize working promo codes and discount offers to help users avoid expired or invalid deals.',
         icon: 'tabler:discount',
       },
       {
-        title: 'SaaS & AI Tools Deals',
+        title: 'SaaS Discounts',
         description:
-          'Discover discounts on popular SaaS tools, AI platforms, and marketing software used by creators and businesses.',
-        icon: 'tabler:brand-appstore',
+          'Find exclusive savings for popular SaaS tools, marketing platforms, AI tools, and productivity apps.',
+        icon: 'tabler:brand-producthunt',
       },
       {
-        title: 'SEO & Marketing Focus',
+        title: 'Deal Updates',
         description:
-          'We highlight tools used in SEO, growth marketing, and eCommerce to support creators and online businesses.',
-        icon: 'tabler:trending-up',
+          'We continuously update our database to ensure users always get access to the latest available offers.',
+        icon: 'tabler:refresh',
       },
     ]}
   />
 
-  <!-- Extended Value Section -->
+  <!-- Features3 Widget ************** -->
+
   <Features3
     columns={3}
     isAfterContent={true}
     items={[
       {
-        title: 'Fast Updates',
+        title: 'Marketing Tools',
         description:
-          'We continuously monitor promotions and update listings to ensure relevance and accuracy.',
-        icon: 'tabler:refresh',
+          'Save on SEO, advertising, and growth tools used by marketers and entrepreneurs worldwide.',
+        icon: 'tabler:chart-line',
       },
       {
-        title: 'Global Tools Coverage',
+        title: 'AI Tools',
         description:
-          'We include tools and deals from global SaaS companies used across marketing, design, and productivity.',
-        icon: 'tabler:world',
+          'Discover discounts on AI writing, image generation, and automation platforms.',
+        icon: 'tabler:robot',
       },
       {
-        title: 'User-Focused Design',
+        title: 'Startup Tools',
         description:
-          'Simple navigation helps users quickly find relevant promo codes without unnecessary complexity.',
-        icon: 'tabler:user-check',
+          'Get early-stage startup tools at reduced prices for building and scaling faster.',
+        icon: 'tabler:rocket',
       },
       {
-        title: 'Transparent Content',
+        title: 'Creator Tools',
         description:
-          'We clearly structure deals and information so users understand what they are clicking before visiting external sites.',
-        icon: 'tabler:shield-check',
+          'Discounts for content creators, designers, and video editors.',
+        icon: 'tabler:video',
       },
       {
-        title: 'No Spam Policy',
+        title: 'Business Tools',
         description:
-          'We avoid low-quality or misleading coupons and focus on trustworthy sources whenever possible.',
-        icon: 'tabler:ban',
+          'Save on CRM, analytics, and business management platforms.',
+        icon: 'tabler:briefcase',
       },
       {
-        title: 'Continuous Improvement',
+        title: 'E-commerce Tools',
         description:
-          'We regularly refine content structure and UX based on user behavior and SEO insights.',
-        icon: 'tabler:adjustments',
+          'Find deals for Shopify apps, dropshipping tools, and online store platforms.',
+        icon: 'tabler:shopping-cart',
       },
     ]}
     image={{
       src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
-      alt: 'Digital marketing dashboard and analytics',
+      alt: 'Digital tools and analytics dashboard',
     }}
   />
 
-  <!-- Values Section -->
+  <!-- Steps2 Widget ****************** -->
+
   <Steps2
-    title="Our mission & values"
-    subtitle="We aim to make online savings simple, transparent, and accessible for everyone using digital tools."
+    title="Our mission"
+    subtitle="We believe software should be affordable and accessible. Our mission is to help users discover better deals and reduce the cost of essential digital tools."
     items={[
       {
-        title: 'User First',
+        title: 'Find the best deals',
         description:
-          'We prioritize clarity and usefulness over cluttered affiliate-heavy listings.',
+          'We scan and organize promo codes from multiple sources to surface the most valuable offers.',
       },
       {
-        title: 'Accuracy Matters',
+        title: 'Save time and money',
         description:
-          'We strive to keep promo codes relevant, tested, and up to date.',
+          'Instead of searching across multiple websites, users can find everything in one place.',
       },
       {
-        title: 'Transparency',
+        title: 'Improve access to tools',
         description:
-          'We clearly structure information so users know what they are clicking and why.',
+          'We help individuals and businesses access tools they need without overpaying.',
       },
     ]}
   />
 
-  <!-- Growth & Impact -->
+  <!-- Steps2 Widget ****************** -->
+
   <Steps2
-    title="What we are building"
-    subtitle="TrendTrack Promo Code is evolving into a hub for SaaS deals, marketing tools, and digital growth resources."
+    title="Why choose TrendTrack"
+    subtitle="We focus on reliability, simplicity, and real value for users looking for discounts on digital products."
     isReversed={true}
     callToAction={{
-      text: 'Explore Deals',
+      text: 'Browse deals',
       href: '/',
     }}
     items={[
       {
-        title: 'Global SaaS coverage',
+        title: 'Trusted deal curation',
         description:
-          'Expanding coverage across AI tools, marketing platforms, and productivity software.',
-        icon: 'tabler:world-search',
+          'We prioritize verified and relevant promo codes instead of spam or outdated offers.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Creator economy focus',
+        title: 'Fast updates',
         description:
-          'Helping creators and marketers find tools that improve content, traffic, and monetization.',
-        icon: 'tabler:users',
+          'Our listings are regularly updated to reflect the latest promotions.',
+        icon: 'tabler:clock',
       },
       {
-        title: 'SEO-driven discovery',
+        title: 'User-first experience',
         description:
-          'Built with search-first structure to help users find deals through Google and organic traffic.',
-        icon: 'tabler:search',
+          'We design everything with clarity and ease of use in mind.',
+        icon: 'tabler:user-heart',
       },
     ]}
   />
 
-  <!-- Coverage -->
+  <!-- Features2 Widget ************** -->
+
   <Features2
-    title="Categories we cover"
-    tagline="Explore"
+    title="Our focus categories"
+    tagline="What we cover"
     columns={4}
     items={[
       {
         title: 'AI Tools',
-        description: 'Discounts on AI writing, image, and productivity tools.',
+        description: 'Discounts on AI writing, image, and automation tools.',
       },
       {
-        title: 'SEO Software',
-        description: 'Tools for keyword research, tracking, and optimization.',
+        title: 'Marketing Software',
+        description: 'SEO, ads, analytics, and growth platforms.',
       },
       {
-        title: 'Marketing SaaS',
-        description: 'Platforms for ads, funnels, and automation.',
+        title: 'Creator Tools',
+        description: 'Design, video editing, and content creation tools.',
       },
       {
-        title: 'E-commerce Tools',
-        description: 'Solutions for Shopify, Amazon, and online stores.',
+        title: 'Business SaaS',
+        description: 'CRM, productivity, and management tools.',
       },
     ]}
   />
 
-  <!-- Contact -->
+  <!-- Features2 Widget ************** -->
+
   <Features2
-    title="Get in touch"
-    tagline="Support"
+    title="Contact & Support"
+    tagline="Get in touch"
     columns={2}
     items={[
       {
-        title: 'Email Support',
+        title: 'Email support',
         description:
-          'For questions about listings, partnerships, or corrections, contact us via email.',
+          'For partnership, corrections, or promo code submissions, contact our team anytime.',
         icon: 'tabler:mail',
       },
       {
-        title: 'Partnerships',
+        title: 'Submit a deal',
         description:
-          'We collaborate with SaaS companies and tool providers for promotions and deals.',
-        icon: 'tabler:handshake',
+          'Found a working coupon or deal? Share it with us and help the community save more.',
+        icon: 'tabler:gift',
       },
     ]}
   />
