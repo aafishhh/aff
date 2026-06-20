@@ -7,221 +7,216 @@ import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
 
 const metadata = {
-  title: 'About us',
+  title: 'About TrendTrack Promo Code',
+  description:
+    'Learn more about TrendTrack Promo Code — your trusted source for verified promo codes, SaaS discounts, and online savings tools.',
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
-
+  <!-- Hero Section -->
   <Hero
-    tagline="About us"
+    tagline="About TrendTrack Promo Code"
     image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Caos Image',
+      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80',
+      alt: 'Online savings and digital marketing concept',
     }}
   >
     <Fragment slot="title">
-      Elevate your online presence with our <br />
-      <span class="text-accent dark:text-white"> Beautiful Website Templates</span>
+      Save more online with <br />
+      <span class="text-accent dark:text-white">Verified Promo Codes & Deals</span>
     </Fragment>
 
     <Fragment slot="subtitle">
-      Donec efficitur, ipsum quis congue luctus, mauris magna convallis mauris, eu auctor nisi lectus non augue. Donec
-      quis lorem non massa vulputate efficitur ac at turpis. Sed tincidunt ex a nunc convallis, et lobortis nisi tempus.
-      Suspendisse vitae nisi eget tortor luctus maximus sed non lectus.
+      TrendTrack Promo Code is built to help users discover verified discount codes, SaaS deals, and marketing tool
+      promotions in one place. We focus on accuracy, simplicity, and helping users save money while using the best
+      digital tools online.
     </Fragment>
   </Hero>
 
-  <!-- Stats Widget ****************** -->
-
+  <!-- Stats Section -->
   <Stats
-    title="Statistics about us"
+    title="Why users trust us"
     stats={[
-      { title: 'Offices', amount: '4' },
-      { title: 'Employees', amount: '248' },
-      { title: 'Templates', amount: '12' },
-      { title: 'Awards', amount: '24' },
+      { title: 'Verified Deals', amount: '100+' },
+      { title: 'Updated Weekly', amount: '7D' },
+      { title: 'Tools Covered', amount: '50+' },
+      { title: 'Savings Focus', amount: '24/7' },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
+  <!-- Core Value Features -->
   <Features3
-    title="Our templates"
-    subtitle="Etiam scelerisque, enim eget vestibulum luctus, nibh mauris blandit nulla, nec vestibulum risus justo ut enim. Praesent lacinia diam et ante imperdiet euismod."
+    title="What we provide"
+    subtitle="We focus on curated, high-quality promo codes and digital tool discounts to help users save time and money."
     columns={3}
     isBeforeContent={true}
     items={[
       {
-        title: 'Educational',
+        title: 'Verified Promo Codes',
         description:
-          'Morbi faucibus luctus quam, sit amet aliquet felis tempor id. Cras augue massa, ornare quis dignissim a, molestie vel nulla.',
-        icon: 'tabler:template',
+          'We aim to list only active and tested promo codes to reduce user frustration and expired coupon clicks.',
+        icon: 'tabler:discount',
       },
       {
-        title: 'Interior Design',
+        title: 'SaaS & AI Tools Deals',
         description:
-          'Vivamus porttitor, tortor convallis aliquam pretium, turpis enim consectetur elit, vitae egestas purus erat ac nunc nulla.',
-        icon: 'tabler:template',
+          'Discover discounts on popular SaaS tools, AI platforms, and marketing software used by creators and businesses.',
+        icon: 'tabler:brand-appstore',
       },
       {
-        title: 'Photography',
+        title: 'SEO & Marketing Focus',
         description:
-          'Duis sed lectus in nisl vehicula porttitor eget quis odio. Aliquam erat volutpat. Nulla eleifend nulla id sem fermentum.',
-        icon: 'tabler:template',
+          'We highlight tools used in SEO, growth marketing, and eCommerce to support creators and online businesses.',
+        icon: 'tabler:trending-up',
       },
     ]}
   />
 
-  <!-- Features3 Widget ************** -->
-
+  <!-- Extended Value Section -->
   <Features3
     columns={3}
     isAfterContent={true}
     items={[
       {
-        title: 'E-commerce',
+        title: 'Fast Updates',
         description:
-          'Rutrum non odio at vehicula. Proin ipsum justo, dignissim in vehicula sit amet, dignissim id quam. Sed ac tincidunt sapien.',
-        icon: 'tabler:template',
+          'We continuously monitor promotions and update listings to ensure relevance and accuracy.',
+        icon: 'tabler:refresh',
       },
       {
-        title: 'Blog',
+        title: 'Global Tools Coverage',
         description:
-          'Nullam efficitur volutpat sem sed fringilla. Suspendisse et enim eu orci volutpat laoreet ac vitae libero.',
-        icon: 'tabler:template',
+          'We include tools and deals from global SaaS companies used across marketing, design, and productivity.',
+        icon: 'tabler:world',
       },
       {
-        title: 'Business',
+        title: 'User-Focused Design',
         description:
-          'Morbi et elit finibus, facilisis justo ut, pharetra ipsum. Donec efficitur, ipsum quis congue luctus, mauris magna.',
-        icon: 'tabler:template',
+          'Simple navigation helps users quickly find relevant promo codes without unnecessary complexity.',
+        icon: 'tabler:user-check',
       },
       {
-        title: 'Branding',
+        title: 'Transparent Content',
         description:
-          'Suspendisse vitae nisi eget tortor luctus maximus sed non lectus. Cras malesuada pretium placerat. Nullam venenatis dolor a ante rhoncus.',
-        icon: 'tabler:template',
+          'We clearly structure deals and information so users understand what they are clicking before visiting external sites.',
+        icon: 'tabler:shield-check',
       },
       {
-        title: 'Medical',
+        title: 'No Spam Policy',
         description:
-          'Vestibulum malesuada lacus id nibh posuere feugiat. Nam volutpat nulla a felis ultrices, id suscipit mauris congue. In hac habitasse platea dictumst.',
-        icon: 'tabler:template',
+          'We avoid low-quality or misleading coupons and focus on trustworthy sources whenever possible.',
+        icon: 'tabler:ban',
       },
       {
-        title: 'Fashion Design',
+        title: 'Continuous Improvement',
         description:
-          'Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus.',
-        icon: 'tabler:template',
+          'We regularly refine content structure and UX based on user behavior and SEO insights.',
+        icon: 'tabler:adjustments',
       },
     ]}
     image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1740&q=80',
-      alt: 'Colorful Image',
+      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
+      alt: 'Digital marketing dashboard and analytics',
     }}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
+  <!-- Values Section -->
   <Steps2
-    title="Our values"
-    subtitle="Maecenas eu tellus eget est scelerisque lacinia et a diam. Aliquam velit lorem, vehicula id fermentum et, rhoncus et purus. Nulla facilisi. Vestibulum malesuada lacus."
+    title="Our mission & values"
+    subtitle="We aim to make online savings simple, transparent, and accessible for everyone using digital tools."
     items={[
       {
-        title: 'Customer-centric approach',
+        title: 'User First',
         description:
-          'Donec id nibh neque. Quisque et fermentum tortor. Fusce vitae dolor a mauris dignissim commodo. Ut eleifend luctus condimentum.',
+          'We prioritize clarity and usefulness over cluttered affiliate-heavy listings.',
       },
       {
-        title: 'Constant Improvement',
+        title: 'Accuracy Matters',
         description:
-          'Phasellus laoreet fermentum venenatis. Vivamus dapibus pulvinar arcu eget mattis. Fusce eget mauris leo.',
+          'We strive to keep promo codes relevant, tested, and up to date.',
       },
       {
-        title: 'Ethical Practices',
+        title: 'Transparency',
         description:
-          'Vestibulum imperdiet libero et lectus molestie, et maximus augue porta. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.',
+          'We clearly structure information so users know what they are clicking and why.',
       },
     ]}
   />
 
-  <!-- Steps2 Widget ****************** -->
-
+  <!-- Growth & Impact -->
   <Steps2
-    title="Achievements"
-    subtitle="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi sagittis, quam nec venenatis lobortis, mi risus tempus nulla, sed porttitor est nibh at nulla."
+    title="What we are building"
+    subtitle="TrendTrack Promo Code is evolving into a hub for SaaS deals, marketing tools, and digital growth resources."
     isReversed={true}
     callToAction={{
-      text: 'See more',
+      text: 'Explore Deals',
       href: '/',
     }}
     items={[
       {
-        title: 'Global reach',
-        description: 'Nam malesuada urna in enim imperdiet tincidunt. Phasellus non tincidunt nisi, at elementum mi.',
-        icon: 'tabler:globe',
+        title: 'Global SaaS coverage',
+        description:
+          'Expanding coverage across AI tools, marketing platforms, and productivity software.',
+        icon: 'tabler:world-search',
       },
       {
-        title: 'Positive customer feedback and reviews',
+        title: 'Creator economy focus',
         description:
-          'Cras semper nulla leo, eget laoreet erat cursus sed. Praesent faucibus massa in purus iaculis dictum.',
-        icon: 'tabler:message-star',
+          'Helping creators and marketers find tools that improve content, traffic, and monetization.',
+        icon: 'tabler:users',
       },
       {
-        title: 'Awards and recognition as industry experts',
+        title: 'SEO-driven discovery',
         description:
-          'Phasellus lacinia cursus velit, eu malesuada magna pretium eu. Etiam aliquet tellus purus, blandit lobortis ex rhoncus vitae.',
-        icon: 'tabler:award',
+          'Built with search-first structure to help users find deals through Google and organic traffic.',
+        icon: 'tabler:search',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Coverage -->
   <Features2
-    title="Our locations"
-    tagline="Find us"
+    title="Categories we cover"
+    tagline="Explore"
     columns={4}
     items={[
       {
-        title: 'EE.UU',
-        description: '1234 Lorem Ipsum St, 12345, Miami',
+        title: 'AI Tools',
+        description: 'Discounts on AI writing, image, and productivity tools.',
       },
       {
-        title: 'Spain',
-        description: '5678 Lorem Ipsum St, 56789, Madrid',
+        title: 'SEO Software',
+        description: 'Tools for keyword research, tracking, and optimization.',
       },
       {
-        title: 'Australia',
-        description: '9012 Lorem Ipsum St, 90123, Sydney',
+        title: 'Marketing SaaS',
+        description: 'Platforms for ads, funnels, and automation.',
       },
       {
-        title: 'Brazil',
-        description: '3456 Lorem Ipsum St, 34567, São Paulo',
+        title: 'E-commerce Tools',
+        description: 'Solutions for Shopify, Amazon, and online stores.',
       },
     ]}
   />
 
-  <!-- Features2 Widget ************** -->
-
+  <!-- Contact -->
   <Features2
-    title="Technical Support"
-    tagline="Contact us"
+    title="Get in touch"
+    tagline="Support"
     columns={2}
     items={[
       {
-        title: 'Chat with us',
+        title: 'Email Support',
         description:
-          'Integer luctus laoreet libero, auctor varius purus rutrum sit amet. Ut nec molestie nisi, quis eleifend mi.',
-        icon: 'tabler:messages',
+          'For questions about listings, partnerships, or corrections, contact us via email.',
+        icon: 'tabler:mail',
       },
       {
-        title: 'Call us',
+        title: 'Partnerships',
         description:
-          'Mauris faucibus finibus orci, in posuere elit viverra non. In hac habitasse platea dictumst. Cras lobortis metus a hendrerit congue.',
-        icon: 'tabler:headset',
+          'We collaborate with SaaS companies and tool providers for promotions and deals.',
+        icon: 'tabler:handshake',
       },
     ]}
   />
