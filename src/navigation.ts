@@ -1,30 +1,30 @@
 import { getPermalink, getBlogPermalink, getAsset } from './utils/permalinks';
 
 export const headerData = {
-  links: [
+ links: [
     {
       text: 'Promo Code',
-      href: getPermalink('/#promo-code'),
+      href: '/#promo-code', // 直接写字符串，不要用 getPermalink
     },
     {
       text: 'Features',
-      href: getPermalink('/#features'),
+      href: '/#features',
     },
     {
       text: 'How It Works',
-      href: getPermalink('/#how-it-works'),
+      href: '/#how-it-works',
     },
     {
       text: 'Pricing',
-      href: getPermalink('/#pricing'),
+      href: '/#pricing',
     },
     {
       text: 'Reviews',
-      href: getPermalink('/#reviews'),
+      href: '/#reviews',
     },
     {
       text: 'FAQ',
-      href: getPermalink('/#faq'),
+      href: '/#faq',
     },
   ],
 actions: [
