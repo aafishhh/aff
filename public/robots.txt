@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://trendtrackpromocode.com/sitemap.xml
+Sitemap: https://trendtrackpromocode.com/sitemap-index.xml

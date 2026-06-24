@@ -28,7 +28,48 @@ export default defineConfig({
   trailingSlash: 'always',
 
   integrations: [
-    sitemap(),
+    sitemap({
+      serialize(item) {
+        const url = item.url;
+        // Homepage — highest priority
+        if (url === 'https://trendtrackpromocode.com/') {
+          item.priority = 1.0;
+          item.changefreq = 'weekly';
+          item.lastmod = new Date();
+        }
+        // Blog posts
+        else if (url.includes('/blog/') && url !== 'https://trendtrackpromocode.com/blog/') {
+          item.priority = 0.8;
+          item.changefreq = 'monthly';
+          item.lastmod = new Date();
+        }
+        // Blog index
+        else if (url === 'https://trendtrackpromocode.com/blog/') {
+          item.priority = 0.7;
+          item.changefreq = 'weekly';
+          item.lastmod = new Date();
+        }
+        // Key conversion pages
+        else if (url.includes('/pricing/') || url.includes('/alternatives/')) {
+          item.priority = 0.8;
+          item.changefreq = 'monthly';
+          item.lastmod = new Date();
+        }
+        // Legal pages — lowest priority
+        else if (url.includes('/privacy/') || url.includes('/terms/')) {
+          item.priority = 0.3;
+          item.changefreq = 'yearly';
+          item.lastmod = new Date();
+        }
+        // Everything else
+        else {
+          item.priority = 0.6;
+          item.changefreq = 'monthly';
+          item.lastmod = new Date();
+        }
+        return item;
+      },
+    }),
     mdx(),
     icon({
       include: {
