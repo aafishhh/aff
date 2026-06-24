@@ -50,24 +50,20 @@
 }
 
 @utility text-muted {
-  /* 修改这里，统一控制全站所有副标题/描述文字的样式 */
-  color: var(--aw-color-text-muted); /* 保持原有颜色变量 */
-  font-size: 16px;                   /* 统一字体大小 */
-  line-height: 1.75;                 /* 统一行高，增加舒适度 */
-  margin-top: 1rem;                  /* 统一上方间距 */
-  margin-bottom: 2rem;               /* 统一下方间距 */
+  color: var(--aw-color-text-muted);
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 @utility btn {
-  @apply inline-flex items-center justify-center rounded-full border-gray-400 border bg-transparent font-medium text-center text-base text-page leading-snug transition py-3.5 px-6 md:px-8 ease-in duration-200 focus:ring-blue-500 focus:ring-offset-blue-200 focus:ring-2 focus:ring-offset-2 hover:bg-gray-100 hover:border-gray-600 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
+  @apply inline-flex items-center justify-center rounded-[6px] border border-gray-400 bg-transparent font-medium text-center text-base text-page leading-snug transition py-2.5 px-5 ease-in duration-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#006bff] focus-visible:ring-offset-2 hover:bg-gray-100 hover:border-gray-500 dark:text-slate-300 dark:border-slate-500 dark:hover:bg-slate-800 dark:hover:border-slate-800 cursor-pointer;
 }
 
 @utility btn-primary {
-  /* 强制设定背景为 primary 变量 (#9FE870)，文字为深绿色 (#163300) */
-  @apply btn font-semibold 
-         bg-primary text-[#163300] border-primary 
-         hover:bg-secondary hover:border-secondary hover:text-[#163300] 
-         dark:text-[#163300] dark:bg-primary dark:border-primary 
+  @apply btn font-semibold
+         bg-primary text-[#163300] border-primary
+         hover:bg-secondary hover:border-secondary hover:text-[#163300]
+         dark:text-[#163300] dark:bg-primary dark:border-primary
          dark:hover:border-secondary dark:hover:bg-secondary;
 }
 
@@ -81,7 +77,7 @@
 
 #header.scroll > div:first-child {
   @apply bg-page md:bg-white/90 md:backdrop-blur-md;
-  box-shadow: 0 0.375rem 1.5rem 0 rgb(140 152 164 / 13%);
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
 }
 .dark #header.scroll > div:first-child,
 #header.scroll.dark > div:first-child {
@@ -124,4 +120,12 @@
 
 .dd *:first-child {
   margin-top: 0;
+}
+
+@utility shadow-geist {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.04);
+}
+
+@utility shadow-geist-lg {
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.02), 0 4px 8px -4px rgba(0, 0, 0, 0.04), 0 16px 24px -8px rgba(0, 0, 0, 0.06);
 }
