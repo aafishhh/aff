@@ -49,6 +49,9 @@ export interface MetaData {
 
   openGraph?: MetaDataOpenGraph;
   twitter?: MetaDataTwitter;
+
+  /** Page-specific JSON-LD structured data (FAQPage, BreadcrumbList, etc.) */
+  jsonLd?: Record<string, any> | Record<string, any>[];
 }
 
 export interface MetaDataRobots {

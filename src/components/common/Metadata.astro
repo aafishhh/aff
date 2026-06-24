@@ -22,6 +22,7 @@ const {
   description,
   openGraph = {},
   twitter = {},
+  jsonLd,
 } = Astro.props;
 
 const mergedOg: MetaDataOpenGraph = merge(
@@ -108,6 +109,40 @@ const seoProps: SEOProps = {
   twitter: mergedTwitter,
   surpressWarnings: true,
 };
+
+// --- JSON-LD Structured Data ---
+const siteUrl = (SITE?.site || 'https://trendtrackpromocode.com/').replace(/\/+$/, '/');
+const siteName = SITE?.name || 'TrendTrack Promo Code';
+const siteDescription = description || METADATA?.description || '';
+
+const organizationSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: siteName,
+  url: siteUrl,
+  logo: `${siteUrl}sitelogo.png`,
+  description: 'Your trusted source for verified TrendTrack promo codes and discount coupons.',
+};
+
+const websiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: siteName,
+  url: siteUrl,
+  description: siteDescription,
+  publisher: {
+    '@type': 'Organization',
+    name: siteName,
+    url: siteUrl,
+  },
+};
+
+const pageSchemas = jsonLd ? (Array.isArray(jsonLd) ? jsonLd : [jsonLd]) : [];
+const allSchemas = [organizationSchema, websiteSchema, ...pageSchemas];
 ---
 
 <SEO {...seoProps} />
+
+{allSchemas.map((schema) => (
+  <script type="application/ld+json" set:html={JSON.stringify(schema)} />
+))}
