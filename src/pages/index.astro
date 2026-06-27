@@ -128,18 +128,18 @@ const metadata = {
 
 <Fragment slot="actions">
     <!-- 优惠卡片：宽度设置为 w-[300px]，显得更聚焦且大气 -->
-    <div class="mt-8 border border-[#9FE870] rounded-[20px] p-8 bg-white shadow-geist w-[300px] mx-auto">
-      <p class="text-[12px] font-bold text-gray-500 uppercase tracking-widest">Exclusive Promo Code</p>
+    <div class="mt-8 border border-[#9FE870] rounded-[20px] p-8 bg-white dark:bg-gray-800 shadow-geist w-[300px] mx-auto">
+      <p class="text-[12px] font-bold text-muted uppercase tracking-widest">Exclusive Promo Code</p>
       
       <!-- WINNING 字体大小设为 50px -->
       <h2 class="text-[50px] font-extrabold text-[#163300] my-3 leading-none tracking-tight">WINNING</h2>
       
-      <p class="text-[16px] font-medium text-gray-600 mb-6">20% off all plans</p>
+      <p class="text-[16px] font-medium text-muted mb-6">20% off all plans</p>
       
       <!-- 复制按钮 -->
       <button 
         onclick="navigator.clipboard.writeText('WINNING'); alert('Code Copied!')"
-        class="w-full py-2 mb-3 border border-gray-400 rounded-[8px] text-[16px] font-semibold hover:bg-gray-100 hover:border-gray-500 transition cursor-pointer"
+        class="w-full py-2 mb-3 border border-gray-400 dark:border-gray-500 rounded-[8px] text-[16px] font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-500 transition cursor-pointer"
       >
         Copy code WINNING
       </button>
@@ -154,13 +154,13 @@ const metadata = {
         Activate discount →
       </a>
 
-      <div class="flex items-center justify-between pt-6 border-t border-gray-100">
-              <div class="flex items-center gap-2 text-gray-600 text-[14px]">
+      <div class="flex items-center justify-between pt-6 border-t border-gray-100 dark:border-gray-700">
+              <div class="flex items-center gap-2 text-muted text-[14px]">
                 <span>📋</span> 109 copies today
               </div>
-              <div class="flex items-center border border-gray-200 rounded-lg px-3 py-1">
+              <div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1">
                 <span class="text-[16px]">👍</span>
-                <span class="text-[14px] font-bold text-gray-700 ml-1">88</span>
+                <span class="text-[14px] font-bold text-heading ml-1">88</span>
               </div>
             </div>
           </div>
@@ -175,14 +175,14 @@ const metadata = {
   <!-- What is TrendTrack Section ******************* -->
 
   <section id="what-is-trendtrack" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
-    <div class="max-w-[640px] mx-auto">
+    <div class="max-w-4xl mx-auto">
       <p class="text-primary font-bold tracking-wide uppercase text-sm text-center">Overview</p>
-      <h2 class="text-3xl font-bold mt-2 mb-6 text-center">What is TrendTrack?</h2>
-      <div class="prose prose-lg max-w-none text-gray-600">
-        <p>
+      <h2 class="text-3xl font-bold mt-2 mb-6 text-center text-heading">What is TrendTrack?</h2>
+      <div class="prose prose-lg max-w-none dark:prose-invert">
+        <p class="text-muted">
           TrendTrack is a comprehensive e-commerce intelligence platform designed to help online sellers, dropshippers, and marketing agencies gain a competitive edge. Founded as a Shopify store research tool, it has evolved into a full-stack analytics suite that tracks over 12 million online stores worldwide.
         </p>
-        <p>
+        <p class="text-muted">
           The platform combines four core capabilities: <strong>store intelligence</strong> (revenue estimates, traffic trends, app detection), <strong>product discovery</strong> (best-seller tracking, trending product alerts), <strong>ad creative insights</strong> (Facebook, TikTok, and Pinterest ad libraries), and <strong>competitor monitoring</strong> (funnel analysis, pricing strategy breakdowns). Users get a real-time window into what products are selling, which ads are working, and how successful stores are structured.
         </p>
       </div>
@@ -240,27 +240,27 @@ const metadata = {
 <section id="how-it-works" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
   <div class="text-center mb-12">
     <p class="text-primary font-bold tracking-wide uppercase text-sm">How it Works</p>
-    <h2 class="text-3xl font-bold mt-2">How to Use TrendTrack Promo Code</h2>
+    <h2 class="text-3xl font-bold mt-2 text-heading">How to Use TrendTrack Promo Code</h2>
   </div>
 
   <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
     
-    <div class="flex flex-col items-center text-center p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
       <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">1</div>
-      <h3 class="font-bold text-lg mb-2">Choose Your Plan</h3>
-      <p class="text-gray-600 text-sm">Browse the official subscription tiers (Starter, Pro, or Business) and pick the one that fits your needs.</p>
+      <h3 class="font-bold text-lg mb-2 text-heading">Choose Your Plan</h3>
+      <p class="text-muted text-sm">Browse the official subscription tiers (Starter, Pro, or Business) and pick the one that fits your needs.</p>
     </div>
 
-    <div class="flex flex-col items-center text-center p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
       <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">2</div>
-      <h3 class="font-bold text-lg mb-2">Apply Code</h3>
-      <p class="text-gray-600 text-sm">Copy the coupon <strong>WINNING</strong> and paste it into the "Discount code" field during the checkout process.</p>
+      <h3 class="font-bold text-lg mb-2 text-heading">Apply Code</h3>
+      <p class="text-muted text-sm">Copy the coupon <strong>WINNING</strong> and paste it into the "Discount code" field during the checkout process.</p>
     </div>
 
-    <div class="flex flex-col items-center text-center p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
       <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">3</div>
-      <h3 class="font-bold text-lg mb-2">Confirm and Save!</h3>
-      <p class="text-gray-600 text-sm">Verify that the 20% price reduction is reflected in your total, then confirm your subscription.</p>
+      <h3 class="font-bold text-lg mb-2 text-heading">Confirm and Save!</h3>
+      <p class="text-muted text-sm">Verify that the 20% price reduction is reflected in your total, then confirm your subscription.</p>
     </div>
     
   </div>
@@ -403,29 +403,29 @@ const metadata = {
   <section id="who-is-it-for" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
     <div class="text-center mb-10">
       <p class="text-primary font-bold tracking-wide uppercase text-sm">Use Cases</p>
-      <h2 class="text-3xl font-bold mt-2">Who Should Use TrendTrack?</h2>
-      <p class="text-gray-500 mt-3 max-w-[576px] mx-auto">TrendTrack serves a wide range of e-commerce professionals. Here is how different roles benefit from the platform &mdash; and from applying a promo code to reduce costs.</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Who Should Use TrendTrack?</h2>
+      <p class="text-muted mt-3 max-w-2xl mx-auto">TrendTrack serves a wide range of e-commerce professionals. Here is how different roles benefit from the platform &mdash; and from applying a promo code to reduce costs.</p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-      <div class="p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
         <div class="text-3xl mb-3">🛒</div>
-        <h3 class="font-bold text-lg mb-2">Dropshippers</h3>
-        <p class="text-gray-600 text-sm">Find winning products before competitors do. Track store revenue signals, identify trending items, and validate product ideas with real data instead of guesswork.</p>
+        <h3 class="font-bold text-lg mb-2 text-heading">Dropshippers</h3>
+        <p class="text-muted text-sm">Find winning products before competitors do. Track store revenue signals, identify trending items, and validate product ideas with real data instead of guesswork.</p>
       </div>
-      <div class="p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
         <div class="text-3xl mb-3">🏷️</div>
-        <h3 class="font-bold text-lg mb-2">Brand Owners</h3>
-        <p class="text-gray-600 text-sm">Monitor competitor pricing, ad creative rotations, and store growth patterns. Understand how rival brands acquire customers and adapt your own strategy accordingly.</p>
+        <h3 class="font-bold text-lg mb-2 text-heading">Brand Owners</h3>
+        <p class="text-muted text-sm">Monitor competitor pricing, ad creative rotations, and store growth patterns. Understand how rival brands acquire customers and adapt your own strategy accordingly.</p>
       </div>
-      <div class="p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
         <div class="text-3xl mb-3">📊</div>
-        <h3 class="font-bold text-lg mb-2">Ad Agencies</h3>
-        <p class="text-gray-600 text-sm">Access a centralized intelligence dashboard for multiple client stores. Use the ad library to craft data-backed creative strategies and demonstrate ROI with concrete competitor benchmarks.</p>
+        <h3 class="font-bold text-lg mb-2 text-heading">Ad Agencies</h3>
+        <p class="text-muted text-sm">Access a centralized intelligence dashboard for multiple client stores. Use the ad library to craft data-backed creative strategies and demonstrate ROI with concrete competitor benchmarks.</p>
       </div>
-      <div class="p-6 bg-white rounded-[20px] border border-gray-200 shadow-geist">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
         <div class="text-3xl mb-3">🔍</div>
-        <h3 class="font-bold text-lg mb-2">Market Researchers</h3>
-        <p class="text-gray-600 text-sm">Study niche trends, store technology stacks, and category-level performance. Export data for deeper analysis and build comprehensive market reports with confidence.</p>
+        <h3 class="font-bold text-lg mb-2 text-heading">Market Researchers</h3>
+        <p class="text-muted text-sm">Study niche trends, store technology stacks, and category-level performance. Export data for deeper analysis and build comprehensive market reports with confidence.</p>
       </div>
     </div>
   </section>
@@ -493,46 +493,46 @@ const metadata = {
   <section id="savings" class="max-w-[800px] mx-auto px-4 sm:px-6 py-12">
     <div class="text-center mb-8">
       <p class="text-primary font-bold tracking-wide uppercase text-sm">Savings Calculator</p>
-      <h2 class="text-3xl font-bold mt-2">How Much You Save with the Promo Code</h2>
-      <p class="text-gray-500 mt-3">Real dollar savings when you apply code <strong>WINNING</strong> at checkout.</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">How Much You Save with the Promo Code</h2>
+      <p class="text-muted mt-3">Real dollar savings when you apply code <strong>WINNING</strong> at checkout.</p>
     </div>
     <div class="overflow-x-auto">
-      <table class="w-full text-sm border border-gray-200 rounded-[20px] overflow-hidden">
+      <table class="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-[20px] overflow-hidden">
         <thead>
-          <tr class="bg-gray-50">
-            <th class="text-left px-4 py-3 font-bold text-gray-700">Plan</th>
-            <th class="text-right px-4 py-3 font-bold text-gray-700">Standard Price</th>
-            <th class="text-right px-4 py-3 font-bold text-gray-700">With 20% Off</th>
+          <tr class="bg-gray-50 dark:bg-gray-800">
+            <th class="text-left px-4 py-3 font-bold text-heading">Plan</th>
+            <th class="text-right px-4 py-3 font-bold text-heading">Standard Price</th>
+            <th class="text-right px-4 py-3 font-bold text-heading">With 20% Off</th>
             <th class="text-right px-4 py-3 font-bold text-[#163300]">Monthly Savings</th>
             <th class="text-right px-4 py-3 font-bold text-[#163300]">Yearly Savings</th>
           </tr>
         </thead>
-        <tbody class="divide-y divide-gray-100">
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
           <tr>
-            <td class="px-4 py-3 font-semibold">Starter</td>
-            <td class="text-right px-4 py-3 text-gray-600">$59/mo</td>
-            <td class="text-right px-4 py-3">$47.20/mo</td>
+            <td class="px-4 py-3 font-semibold text-heading">Starter</td>
+            <td class="text-right px-4 py-3 text-muted">$59/mo</td>
+            <td class="text-right px-4 py-3 text-heading">$47.20/mo</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$11.80</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$141.60</td>
           </tr>
           <tr>
-            <td class="px-4 py-3 font-semibold">Pro</td>
-            <td class="text-right px-4 py-3 text-gray-600">$89/mo</td>
-            <td class="text-right px-4 py-3">$71.20/mo</td>
+            <td class="px-4 py-3 font-semibold text-heading">Pro</td>
+            <td class="text-right px-4 py-3 text-muted">$89/mo</td>
+            <td class="text-right px-4 py-3 text-heading">$71.20/mo</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$17.80</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$213.60</td>
           </tr>
           <tr>
-            <td class="px-4 py-3 font-semibold">Business</td>
-            <td class="text-right px-4 py-3 text-gray-600">$149/mo</td>
-            <td class="text-right px-4 py-3">$119.20/mo</td>
+            <td class="px-4 py-3 font-semibold text-heading">Business</td>
+            <td class="text-right px-4 py-3 text-muted">$149/mo</td>
+            <td class="text-right px-4 py-3 text-heading">$119.20/mo</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$29.80</td>
             <td class="text-right px-4 py-3 text-green-600 font-bold">$357.60</td>
           </tr>
         </tbody>
       </table>
     </div>
-    <p class="text-center text-gray-400 text-xs mt-4">
+    <p class="text-center text-muted text-xs mt-4">
       Savings shown are based on monthly billing. Annual plans may offer additional built-in discounts on top of the promo code savings.
     </p>
   </section>
