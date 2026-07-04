@@ -1,310 +1,375 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
 import Hero from '~/components/widgets/Hero.astro';
-import Content from '~/components/widgets/Content.astro';
-import Comparison from '~/components/widgets/Comparison.astro';
 import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'Alternatives - TrendTrack Promo Code Comparison',
-  description: 'Compare TrendTrack with other promo code solutions. See why TrendTrack is the best choice for your business.',
+  title: 'TrendTrack Alternatives: Honest Comparison with Minea, PiPiAds & More (2026)',
+  description: 'Looking for TrendTrack alternatives? Compare features, pricing, and ad coverage across TrendTrack, Minea, PiPiAds, Dropispy, and AdSpy. Find the best e-commerce spy tool for your needs.',
 };
 
 const competitors = [
   {
     name: 'TrendTrack',
+    logo: '🛰️',
+    tagline: 'Shopify Intelligence + Ad Spy',
     yourProduct: true,
-    features: {
-      'Promo Code Generation': true,
-      'Real-time Analytics': true,
-      'Unlimited Campaigns': true,
-      'API Access': true,
-      'Team Collaboration': true,
-      'Custom Branding': true,
-      'Advanced Reporting': true,
-      'Priority Support': true,
-      'Price': '$99/month',
-    },
+    startingPrice: '$59/mo',
+    adDatabase: '10M+ ads',
+    storeDatabase: '10,000+ Shopify stores',
+    adPlatforms: ['Facebook', 'Instagram', 'Meta Ads Library'],
+    bestFor: 'Sellers who need store intelligence + ad data in one tool',
+    strengths: ['Shopify store intelligence', 'EU/UK real ad spend data', 'Brand tracker', 'Free Chrome extension', 'MCP AI integration'],
+    weaknesses: ['Limited TikTok coverage', 'No Pinterest ads'],
+    rating: 4.8,
+    url: 'https://trendtrack.io?fpr=lanetrendtrack',
   },
   {
-    name: 'Competitor A',
-    features: {
-      'Promo Code Generation': true,
-      'Real-time Analytics': false,
-      'Unlimited Campaigns': false,
-      'API Access': false,
-      'Team Collaboration': true,
-      'Custom Branding': false,
-      'Advanced Reporting': false,
-      'Priority Support': false,
-      'Price': '$149/month',
-    },
+    name: 'Minea',
+    logo: '🔍',
+    tagline: 'Multi-Platform Ad Spy',
+    startingPrice: '$49/mo',
+    adDatabase: '900M+ ads',
+    storeDatabase: 'Limited',
+    adPlatforms: ['Facebook', 'Instagram', 'TikTok', 'Pinterest'],
+    bestFor: 'Sellers who need Pinterest coverage or a free tier',
+    strengths: ['Largest ad database (900M+)', 'Pinterest ad coverage', 'Influencer placements', 'Free plan available'],
+    weaknesses: ['No Shopify store intelligence', 'No EU impression data', 'No brand tracker', 'Credit system limits Starter plan'],
+    rating: 4.2,
+    url: '#',
   },
   {
-    name: 'Competitor B',
-    features: {
-      'Promo Code Generation': true,
-      'Real-time Analytics': true,
-      'Unlimited Campaigns': true,
-      'API Access': false,
-      'Team Collaboration': false,
-      'Custom Branding': true,
-      'Advanced Reporting': false,
-      'Priority Support': false,
-      'Price': '$199/month',
-    },
+    name: 'PiPiAds',
+    logo: '📱',
+    tagline: 'TikTok Ad Spy Specialist',
+    startingPrice: '$49/mo',
+    adDatabase: 'Not disclosed',
+    storeDatabase: 'Partial',
+    adPlatforms: ['TikTok', 'Facebook'],
+    bestFor: 'Sellers focused primarily on TikTok ads',
+    strengths: ['Best TikTok ad filters', 'Product search & winning products', 'Free trial (500 credits)', 'Affordable entry'],
+    weaknesses: ['No niche filters', 'Limited winning product filters', 'Smaller ad collection than Minea', 'No store intelligence'],
+    rating: 4.0,
+    url: '#',
   },
   {
-    name: 'Competitor C',
-    features: {
-      'Promo Code Generation': true,
-      'Real-time Analytics': true,
-      'Unlimited Campaigns': false,
-      'API Access': true,
-      'Team Collaboration': true,
-      'Custom Branding': true,
-      'Advanced Reporting': true,
-      'Priority Support': false,
-      'Price': '$249/month',
-    },
+    name: 'Dropispy',
+    logo: '📦',
+    tagline: 'Facebook Ad Spy for Dropshippers',
+    startingPrice: '$29.9/mo',
+    adDatabase: 'Not disclosed',
+    storeDatabase: 'No',
+    adPlatforms: ['Facebook'],
+    bestFor: 'Budget-conscious dropshippers focused on Facebook',
+    strengths: ['Most affordable option', 'Simple Facebook ad search', 'Chrome extension'],
+    weaknesses: ['Facebook only', 'No store intelligence', 'Limited filters', 'No TikTok/Pinterest'],
+    rating: 3.5,
+    url: '#',
   },
 ];
+
+const featureComparison = [
+  { feature: 'Shopify Store Intelligence', trendtrack: 'full', minea: 'limited', pipiads: 'partial', dropispy: 'none' },
+  { feature: 'Facebook/Instagram Ads', trendtrack: 'full', minea: 'full', pipiads: 'full', dropispy: 'full' },
+  { feature: 'TikTok Ads', trendtrack: 'limited', minea: 'full', pipiads: 'full', dropispy: 'none' },
+  { feature: 'Pinterest Ads', trendtrack: 'none', minea: 'full', pipiads: 'none', dropispy: 'none' },
+  { feature: 'EU/UK Real Ad Spend Data', trendtrack: 'full', minea: 'none', pipiads: 'none', dropispy: 'none' },
+  { feature: 'Brand Tracker', trendtrack: 'full', minea: 'none', pipiads: 'none', dropispy: 'none' },
+  { feature: 'Free Chrome Extension', trendtrack: 'full', minea: 'none', pipiads: 'partial', dropispy: 'partial' },
+  { feature: 'Free Plan/Trial', trendtrack: 'account', minea: 'plan', pipiads: 'trial', dropispy: 'none' },
+  { feature: 'AI Integration (MCP)', trendtrack: 'full', minea: 'none', pipiads: 'none', dropispy: 'none' },
+  { feature: 'Starting Price', trendtrack: '$59/mo', minea: '$49/mo', pipiads: '$49/mo', dropispy: '$29.9/mo' },
+  { feature: 'With 20% OFF Code', trendtrack: '$47.2/mo', minea: '—', pipiads: '—', dropispy: '—' },
+];
+
+const cellRender = (value: string) => {
+  switch (value) {
+    case 'full':
+      return { icon: '✅', text: '', class: 'text-green-500' };
+    case 'limited':
+      return { icon: '⚠️', text: 'Limited', class: 'text-amber-500' };
+    case 'partial':
+      return { icon: '⚠️', text: 'Partial', class: 'text-amber-500' };
+    case 'none':
+      return { icon: '❌', text: '', class: 'text-gray-300 dark:text-gray-600' };
+    default:
+      return { icon: '', text: value, class: 'font-semibold text-heading' };
+  }
+};
 ---
 
 <Layout metadata={metadata}>
   <!-- Hero Widget ******************* -->
   <Hero
     tagline="Alternatives"
-    title="Why Choose TrendTrack?"
-    subtitle="Compare TrendTrack with other promo code management solutions. See why industry leaders trust us for their promotional campaigns."
+    title="TrendTrack vs The Competition"
+    subtitle="An honest, side-by-side comparison of the top e-commerce spy tools in 2026. See how TrendTrack stacks up against Minea, PiPiAds, Dropispy, and more — on features, pricing, and ad coverage."
     actions={[
       {
         variant: 'primary',
-        text: 'Get Started Free',
-        href: '#comparison',
+        text: 'Save 20% with WINNING',
+        href: 'https://trendtrack.io?fpr=lanetrendtrack',
         icon: 'tabler:check',
       },
-    ]}
-  >
-    <Fragment slot="image">
-      <div class="flex justify-center">
-        <svg class="w-full max-w-md" viewBox="0 0 400 300" xmlns="http://www.w3.org/2000/svg">
-          <rect width="400" height="300" fill="#f3f4f6" rx="8" />
-          <circle cx="100" cy="80" r="30" fill="#3b82f6" opacity="0.8" />
-          <circle cx="300" cy="100" r="25" fill="#10b981" opacity="0.8" />
-          <circle cx="150" cy="200" r="35" fill="#f59e0b" opacity="0.8" />
-          <circle cx="280" cy="220" r="28" fill="#8b5cf6" opacity="0.8" />
-          <line x1="100" y1="80" x2="300" y2="100" stroke="#bfdbfe" stroke-width="2" />
-          <line x1="100" y1="80" x2="150" y2="200" stroke="#bfdbfe" stroke-width="2" />
-          <line x1="300" y1="100" x2="280" y2="220" stroke="#bfdbfe" stroke-width="2" />
-        </svg>
-      </div>
-    </Fragment>
-  </Hero>
-
-  <!-- Key Advantages Widget ******* -->
-  <Content
-    tagline="Our Advantages"
-    title="What Sets TrendTrack Apart"
-    items={[
       {
-        title: '20% More Affordable',
-        description: 'Get premium features at the best price in the market. No hidden fees, transparent pricing.',
-      },
-      {
-        title: 'Superior Analytics',
-        description: 'Real-time tracking and detailed insights into campaign performance and customer behavior.',
-      },
-      {
-        title: 'Unlimited Flexibility',
-        description: 'Run unlimited campaigns with no restrictions. Scale your promotions as your business grows.',
-      },
-      {
-        title: 'Full API Access',
-        description: 'Integrate seamlessly with your existing systems. Complete API documentation and support.',
-      },
-      {
-        title: 'Team Collaboration',
-        description: 'Work together efficiently with role-based permissions and activity tracking.',
-      },
-      {
-        title: '24/7 Priority Support',
-        description: 'Dedicated support team ready to help you succeed. Average response time under 2 hours.',
+        variant: 'secondary',
+        text: 'View Full Comparison',
+        href: '#comparison',
       },
     ]}
-    columns={3}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  />
 
-  <!-- Comparison Table Widget ***** -->
-  <div id="comparison" class="relative">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 lg:py-20">
-      <div class="mb-12">
-        <h2 class="text-4xl lg:text-5xl font-bold mb-4 text-center">Feature Comparison</h2>
-        <p class="text-xl text-muted text-center max-w-3xl mx-auto">
-          Detailed comparison of features, pricing, and support across leading promo code platforms.
-        </p>
-      </div>
+  <!-- Quick Verdict Cards ********* -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-10">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm">Quick Verdict</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Which Tool Is Right for You?</h2>
+    </div>
 
-      <!-- Table for desktop -->
-      <div class="hidden md:block overflow-x-auto rounded-lg border border-gray-200 dark:border-gray-700">
-        <table class="w-full text-sm">
-          <thead>
-            <tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
-              <th class="px-6 py-4 text-left font-bold">Features</th>
-              {competitors.map((competitor) => (
-                <th
-                  class={`px-6 py-4 text-center font-bold ${
-                    competitor.yourProduct ? 'bg-blue-50 dark:bg-blue-900/20' : ''
-                  }`}
-                >
-                  <div class="flex flex-col items-center gap-2">
-                    <span>{competitor.name}</span>
-                    {competitor.yourProduct && (
-                      <span class="inline-block px-2 py-1 bg-blue-500 text-white text-xs rounded-full">
-                        You are here
-                      </span>
-                    )}
-                  </div>
-                </th>
-              ))}
-            </tr>
-          </thead>
-          <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
-            {Object.keys(competitors[0].features).map((feature) => (
-              <tr class="hover:bg-gray-50 dark:hover:bg-gray-800 transition">
-                <td class="px-6 py-4 font-semibold">{feature}</td>
-                {competitors.map((competitor) => (
-                  <td
-                    class={`px-6 py-4 text-center ${
-                      competitor.yourProduct ? 'bg-blue-50 dark:bg-blue-900/20' : ''
-                    }`}
-                  >
-                    {typeof competitor.features[feature as keyof typeof competitor.features] === 'boolean' ? (
-                      competitor.features[feature as keyof typeof competitor.features] ? (
-                        <svg class="w-6 h-6 mx-auto text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                      ) : (
-                        <svg class="w-6 h-6 mx-auto text-gray-300 dark:text-gray-600" fill="currentColor" viewBox="0 0 20 20">
-                          <path
-                            fill-rule="evenodd"
-                            d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                      )
-                    ) : (
-                      <span class={competitor.yourProduct ? 'font-bold text-blue-600 dark:text-blue-400' : ''}>
-                        {competitor.features[feature as keyof typeof competitor.features]}
-                      </span>
-                    )}
-                  </td>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      {competitors.map((c) => (
+        <div class={`p-6 rounded-2xl border transition ${c.yourProduct ? 'border-green-400 dark:border-green-500 bg-green-50 dark:bg-green-900/10' : 'border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50'}`}>
+          <div class="flex items-center gap-3 mb-4">
+            <span class="text-3xl">{c.logo}</span>
+            <div>
+              <h3 class="font-bold text-lg text-heading flex items-center gap-2">
+                {c.name}
+                {c.yourProduct && <span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">Recommended</span>}
+              </h3>
+              <p class="text-sm text-muted">{c.tagline}</p>
+            </div>
+            <div class="ml-auto text-right">
+              <p class="text-xs text-muted">Starting at</p>
+              <p class="font-bold text-heading">{c.startingPrice}</p>
+            </div>
+          </div>
+
+          <p class="text-sm text-muted mb-4"><strong class="text-heading">Best for:</strong> {c.bestFor}</p>
+
+          <div class="grid grid-cols-2 gap-3 text-sm mb-4">
+            <div>
+              <p class="text-xs text-muted uppercase tracking-wide">Ad Database</p>
+              <p class="font-semibold text-heading">{c.adDatabase}</p>
+            </div>
+            <div>
+              <p class="text-xs text-muted uppercase tracking-wide">Store Intelligence</p>
+              <p class="font-semibold text-heading">{c.storeDatabase}</p>
+            </div>
+            <div class="col-span-2">
+              <p class="text-xs text-muted uppercase tracking-wide">Ad Platforms</p>
+              <div class="flex flex-wrap gap-1.5 mt-1">
+                {c.adPlatforms.map((p) => (
+                  <span class="text-xs bg-gray-100 dark:bg-gray-700 text-heading px-2 py-0.5 rounded">{p}</span>
                 ))}
-              </tr>
-            ))}
-          </tbody>
-        </table>
-      </div>
+              </div>
+            </div>
+          </div>
 
-      <!-- Cards for mobile -->
-      <div class="md:hidden space-y-6">
-        {competitors.map((competitor) => (
-          <div class={`rounded-lg border-2 p-6 ${competitor.yourProduct ? 'border-blue-500 bg-blue-50 dark:bg-blue-900/20' : 'border-gray-200 dark:border-gray-700'}`}>
-            <h3 class="text-xl font-bold mb-4">
-              {competitor.name}
-              {competitor.yourProduct && <span class="ml-2 text-sm bg-blue-500 text-white px-2 py-1 rounded">Recommended</span>}
-            </h3>
-            <ul class="space-y-3">
-              {Object.entries(competitor.features).map(([feature, value]) => (
-                <li class="flex items-center justify-between">
-                  <span class="text-sm">{feature}</span>
-                  {typeof value === 'boolean' ? (
-                    value ? (
-                      <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fill-rule="evenodd"
-                          d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    ) : (
-                      <svg class="w-5 h-5 text-gray-300" fill="currentColor" viewBox="0 0 20 20">
-                        <path
-                          fill-rule="evenodd"
-                          d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z"
-                          clip-rule="evenodd"
-                        ></path>
-                      </svg>
-                    )
-                  ) : (
-                    <span class="font-semibold text-blue-600 dark:text-blue-400">{value}</span>
-                  )}
-                </li>
-              ))}
+          <div class="space-y-1.5">
+            <p class="text-xs font-semibold text-green-600 dark:text-green-400">✅ Strengths</p>
+            <ul class="text-sm text-muted space-y-0.5">
+              {c.strengths.map((s) => <li class="flex gap-2"><span class="text-green-500">•</span> {s}</li>)}
             </ul>
           </div>
-        ))}
+
+          {!c.yourProduct && (
+            <div class="space-y-1.5 mt-3">
+              <p class="text-xs font-semibold text-amber-600 dark:text-amber-400">⚠️ Weaknesses</p>
+              <ul class="text-sm text-muted space-y-0.5">
+                {c.weaknesses.map((w) => <li class="flex gap-2"><span class="text-amber-500">•</span> {w}</li>)}
+              </ul>
+            </div>
+          )}
+        </div>
+      ))}
+    </div>
+  </section>
+
+  <!-- Feature Comparison Table ****** -->
+  <section id="comparison" class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-10">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm">Head to Head</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Feature Comparison Table</h2>
+      <p class="text-muted mt-3 max-w-2xl mx-auto">Every feature, every tool, side by side. No fluff, no fake "Competitor A/B/C" — these are real products with real strengths and gaps.</p>
+    </div>
+
+    <!-- Desktop table -->
+    <div class="hidden md:block overflow-x-auto rounded-2xl border border-gray-200 dark:border-gray-700">
+      <table class="w-full text-sm">
+        <thead>
+          <tr class="bg-gray-50 dark:bg-gray-800 border-b border-gray-200 dark:border-gray-700">
+            <th class="px-4 py-4 text-left font-bold text-heading">Feature</th>
+            <th class="px-4 py-4 text-center font-bold text-heading bg-green-50 dark:bg-green-900/20">
+              <div class="flex flex-col items-center gap-1">
+                <span>🛰️ TrendTrack</span>
+                <span class="text-xs bg-green-500 text-white px-2 py-0.5 rounded-full">Recommended</span>
+              </div>
+            </th>
+            <th class="px-4 py-4 text-center font-bold text-heading">🔍 Minea</th>
+            <th class="px-4 py-4 text-center font-bold text-heading">📱 PiPiAds</th>
+            <th class="px-4 py-4 text-center font-bold text-heading">📦 Dropispy</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200 dark:divide-gray-700">
+          {featureComparison.map((row) => (
+            <tr class="hover:bg-gray-50 dark:hover:bg-gray-800/50 transition">
+              <td class="px-4 py-3 font-semibold text-heading">{row.feature}</td>
+              {(['trendtrack', 'minea', 'pipiads', 'dropispy'] as const).map((key) => {
+                const cell = cellRender(row[key]);
+                const isTT = key === 'trendtrack';
+                return (
+                  <td class={`px-4 py-3 text-center ${isTT ? 'bg-green-50 dark:bg-green-900/10' : ''}`}>
+                    {cell.icon && <span class={cell.class}>{cell.icon}</span>}
+                    {cell.text && <span class={`text-xs ${cell.class} ml-1`}>{cell.text}</span>}
+                    {(!cell.icon && !cell.text) && <span class={cell.class}>{cell.text}</span>}
+                  </td>
+                );
+              })}
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+
+    <!-- Mobile cards -->
+    <div class="md:hidden space-y-4">
+      {featureComparison.map((row) => (
+        <div class="border border-gray-200 dark:border-gray-700 rounded-xl overflow-hidden">
+          <div class="bg-gray-50 dark:bg-gray-800 px-4 py-2 font-semibold text-heading text-sm">{row.feature}</div>
+          <div class="divide-y divide-gray-100 dark:divide-gray-700">
+            {([
+              { label: '🛰️ TrendTrack', value: row.trendtrack, highlight: true },
+              { label: '🔍 Minea', value: row.minea },
+              { label: '📱 PiPiAds', value: row.pipiads },
+              { label: '📦 Dropispy', value: row.dropispy },
+            ] as const).map((item) => {
+              const cell = cellRender(item.value);
+              return (
+                <div class={`flex items-center justify-between px-4 py-2 text-sm ${item.highlight ? 'bg-green-50 dark:bg-green-900/10' : ''}`}>
+                  <span class="text-muted">{item.label}</span>
+                  <span class={cell.class}>
+                    {cell.icon} {cell.text}
+                  </span>
+                </div>
+              );
+            })}
+          </div>
+        </div>
+      ))}
+    </div>
+
+    <p class="text-xs text-muted text-center mt-6">
+      Data verified as of July 2026. Prices reflect published rates. TrendTrack price with code reflects 20% OFF applied.
+    </p>
+  </section>
+
+  <!-- Detailed Comparisons ********* -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-10">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm">Deep Dives</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Read the Full Comparisons</h2>
+      <p class="text-muted mt-3 max-w-2xl mx-auto">Each comparison breaks down every feature, pricing tier, use case, and real-world scenario — so you can make an informed decision.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <a href="/blog/trendtrack-vs-minea/" class="block p-6 rounded-2xl border border-gray-200 dark:border-gray-700 hover:border-green-400 dark:hover:border-green-500 transition bg-white dark:bg-gray-800/50 group">
+        <div class="text-4xl mb-3">🛰️ vs 🔍</div>
+        <h3 class="font-bold text-lg text-heading mb-2 group-hover:text-primary transition">TrendTrack vs Minea</h3>
+        <p class="text-sm text-muted">The two biggest names in e-commerce intelligence. We compare store intelligence, ad coverage, pricing, and AI integration to help you pick.</p>
+        <span class="inline-flex items-center gap-1 text-sm text-primary font-semibold mt-4 group-hover:gap-2 transition">Read comparison →</span>
+      </a>
+
+      <div class="block p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 opacity-60">
+        <div class="text-4xl mb-3">🛰️ vs 📱</div>
+        <h3 class="font-bold text-lg text-heading mb-2">TrendTrack vs PiPiAds</h3>
+        <p class="text-sm text-muted">Coming soon — TikTok specialist vs Shopify intelligence powerhouse.</p>
+        <span class="inline-flex items-center gap-1 text-sm text-muted mt-4">Coming soon</span>
+      </div>
+
+      <div class="block p-6 rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800/50 opacity-60">
+        <div class="text-4xl mb-3">🛰️ vs 📦</div>
+        <h3 class="font-bold text-lg text-heading mb-2">TrendTrack vs Dropispy</h3>
+        <p class="text-sm text-muted">Coming soon — Full-featured intelligence vs budget Facebook spy.</p>
+        <span class="inline-flex items-center gap-1 text-sm text-muted mt-4">Coming soon</span>
       </div>
     </div>
-  </div>
+  </section>
 
-  <!-- Customer Stories Widget **** -->
-  <Content
-    isReversed
-    isAfterContent
-    tagline="Trusted by Industry Leaders"
-    title="Why Customers Switch to TrendTrack"
-    items={[
-      {
-        title: 'E-commerce Giant Increases Sales by 40%',
-        description:
-          'By switching to TrendTrack, a leading e-commerce platform reduced campaign setup time from 2 hours to 15 minutes.',
-      },
-      {
-        title: 'SaaS Company Saves $50K Annually',
-        description:
-          'TrendTrack\'s competitive pricing and unlimited campaigns resulted in significant cost savings for a growing SaaS business.',
-      },
-      {
-        title: 'Agency Manages 200+ Campaigns',
-        description:
-          'With TrendTrack\'s API and team collaboration features, a digital agency scaled from managing 50 to 200 campaigns monthly.',
-      },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
+  <!-- When to Choose What ********** -->
+  <section class="bg-gray-50 dark:bg-gray-900/30 border-y border-gray-200 dark:border-gray-800">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+      <div class="text-center mb-10">
+        <p class="text-primary font-bold tracking-wide uppercase text-sm">Decision Guide</p>
+        <h2 class="text-3xl font-bold mt-2 text-heading">When to Choose Which Tool</h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div class="p-6 rounded-2xl bg-green-50 dark:bg-green-900/10 border border-green-300 dark:border-green-700">
+          <h3 class="font-bold text-lg text-heading mb-3 flex items-center gap-2">🛰️ Choose TrendTrack if...</h3>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You need Shopify store intelligence (traffic, revenue, apps, themes)</li>
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You want EU/UK real ad spend and impression data</li>
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You need a brand tracker to monitor competitors daily</li>
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You want AI integration (MCP with Claude/ChatGPT)</li>
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You run Shopify stores or manage multiple client stores</li>
+            <li class="flex gap-2"><span class="text-green-500 font-bold">✓</span> You want one tool for both store + ad intelligence</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+          <h3 class="font-bold text-lg text-heading mb-3 flex items-center gap-2">🔍 Choose Minea if...</h3>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">✓</span> You need Pinterest ad coverage (unique to Minea)</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">✓</span> You want the largest ad database (900M+ ads)</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">✓</span> You need TikTok ad spying as a primary feature</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">✓</span> You want a free plan to test before committing</li>
+            <li class="flex gap-2"><span class="text-blue-500 font-bold">✓</span> You focus on ad-only research (no store intel needed)</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+          <h3 class="font-bold text-lg text-heading mb-3 flex items-center gap-2">📱 Choose PiPiAds if...</h3>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="text-purple-500 font-bold">✓</span> TikTok is your primary ad platform</li>
+            <li class="flex gap-2"><span class="text-purple-500 font-bold">✓</span> You need granular TikTok ad filters</li>
+            <li class="flex gap-2"><span class="text-purple-500 font-bold">✓</span> You want a free trial to explore first</li>
+            <li class="flex gap-2"><span class="text-purple-500 font-bold">✓</span> Budget is tight ($49/mo entry)</li>
+          </ul>
+        </div>
+
+        <div class="p-6 rounded-2xl bg-white dark:bg-gray-800/50 border border-gray-200 dark:border-gray-700">
+          <h3 class="font-bold text-lg text-heading mb-3 flex items-center gap-2">📦 Choose Dropispy if...</h3>
+          <ul class="space-y-2 text-sm text-muted">
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> You only research Facebook ads</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> Budget is the top priority ($29.9/mo)</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> You don't need TikTok or Pinterest</li>
+            <li class="flex gap-2"><span class="text-orange-500 font-bold">✓</span> You're just starting with ad spy tools</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
 
   <!-- CTA Widget ******************** -->
   <CallToAction
     actions={[
       {
         variant: 'primary',
-        text: 'Start Free Trial',
-        href: '#',
+        text: 'Get 20% OFF with Code WINNING',
+        href: 'https://trendtrack.io?fpr=lanetrendtrack',
         icon: 'tabler:check',
       },
       {
         variant: 'secondary',
-        text: 'Schedule Demo',
-        href: '#',
+        text: 'Read TrendTrack Review',
+        href: '/blog/trendtrack-review/',
       },
     ]}
   >
-    <Fragment slot="title">Ready to switch to TrendTrack?</Fragment>
+    <Fragment slot="title">Ready to try TrendTrack?</Fragment>
 
     <Fragment slot="subtitle">
-      Join thousands of businesses that have already made the switch. No credit card required for the free trial.
+      Use code <strong>WINNING</strong> at checkout to get 20% OFF all plans. Starter drops to $47.20/mo, Pro to $71.20/mo. Cancel anytime.
     </Fragment>
   </CallToAction>
 </Layout>
