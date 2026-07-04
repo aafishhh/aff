@@ -49,6 +49,7 @@ export const footerData = {
       links: [
         { text: 'Alternatives', href: getPermalink('/alternatives') },
         { text: 'TrendTrack vs Minea', href: '/blog/trendtrack-vs-minea/' },
+        { text: 'TrendTrack 20% Off', href: '/blog/trendtrack-20-off/' },
         { text: 'Blog', href: getBlogPermalink() },
       ],
     },
