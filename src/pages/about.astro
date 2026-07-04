@@ -1,229 +1,157 @@
 ---
-import Features2 from '~/components/widgets/Features2.astro';
-import Features3 from '~/components/widgets/Features3.astro';
-import Hero from '~/components/widgets/Hero.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import Steps2 from '~/components/widgets/Steps2.astro';
 import Layout from '~/layouts/PageLayout.astro';
+import { getPermalink, getBlogPermalink } from '~/utils/permalinks';
 
 const metadata = {
-  title: 'About us',
+  title: 'About TrendTrack Promo Code — Why This Site Exists',
+  description: 'We are a TrendTrack affiliate partner dedicated to helping e-commerce sellers save money with verified promo codes, honest reviews, and in-depth tool comparisons. Learn our story.',
+  openGraph: {
+    type: 'website',
+  },
 };
 ---
 
 <Layout metadata={metadata}>
-  <!-- Hero Widget ******************* -->
+  <!-- Hero -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 pt-16 pb-8 text-center">
+    <p class="text-primary font-bold tracking-wide uppercase text-sm">About Us</p>
+    <h1 class="text-3xl md:text-4xl font-bold mt-2 mb-4 font-heading text-heading">
+      We help e-commerce sellers save on TrendTrack
+    </h1>
+    <p class="text-lg md:text-xl text-muted max-w-2xl mx-auto">
+      TrendTrack Promo Code is an independent affiliate website. We are not TrendTrack —
+      we are a partner that helps users find the best available discount and decide if TrendTrack is right for them.
+    </p>
+  </section>
 
-  <Hero
-    tagline="About TrendTrack Promo Code"
-    image={{
-      src: 'https://images.unsplash.com/photo-1559136555-9303baea8ebd?auto=format&fit=crop&w=2070&q=80',
-      alt: 'TrendTrack Promo Code savings and deals',
-    }}
-  >
-    <Fragment slot="title">
-      Helping you save more with verified <br />
-      <span class="text-accent dark:text-white">Promo Codes & Exclusive Deals</span>
-    </Fragment>
+  <!-- Our Story -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 font-heading text-heading">Why this site exists</h2>
+      <div class="prose prose-lg max-w-none dark:prose-invert text-muted">
+        <p>
+          When we first started exploring e-commerce intelligence tools, we were overwhelmed by the choices —
+          TrendTrack, Minea, PiPiAds, Dropispy, and a dozen others. Pricing was confusing, promo codes were
+          scattered across Reddit threads and expired coupon sites, and most "review" pages were just keyword-stuffed
+          affiliate pages with no real insight.
+        </p>
+        <p>
+          We built this site to fix that. <strong>One place</strong> where you can find a verified, working
+          TrendTrack promo code, read an honest breakdown of what the tool actually does, and compare it head-to-head
+          with alternatives — without wading through garbage content.
+        </p>
+        <p>
+          We use TrendTrack ourselves. The promo code <strong>WINNING</strong> on this site is the one we negotiated
+          as an affiliate partner, and it gives you 20% off all plans. We test it regularly to make sure it still works.
+        </p>
+      </div>
+    </div>
+  </section>
 
-    <Fragment slot="subtitle">
-      TrendTrack Promo Code is a deal discovery platform that helps users find the latest discounts, coupon codes,
-      and promotional offers across popular SaaS tools and online services. Our goal is simple — make online tools
-      more affordable and accessible for everyone by collecting and organizing the best available deals in one place.
-    </Fragment>
-  </Hero>
+  <!-- What We Do -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <h2 class="text-2xl md:text-3xl font-bold mb-8 text-center font-heading text-heading">What we do</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist text-center">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4 mx-auto">✓</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Verify Promo Codes</h3>
+        <p class="text-muted text-sm">
+          We test the <strong>WINNING</strong> code regularly to confirm it still applies the 20% discount at checkout.
+          If it stops working, we update the site immediately.
+        </p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist text-center">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4 mx-auto">📝</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Write Honest Guides</h3>
+        <p class="text-muted text-sm">
+          From full TrendTrack reviews to product research tutorials, we publish content based on real experience
+          with the platform — not reworded marketing copy.
+        </p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist text-center">
+        <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4 mx-auto">⚖️</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Compare Tools Fairly</h3>
+        <p class="text-muted text-sm">
+          Our <a href={getPermalink('/alternatives')} class="text-primary dark:text-blue-400 hover:underline">alternatives page</a>
+          and head-to-head comparison articles lay out where TrendTrack wins and where competitors like Minea or
+          PiPiAds might be a better fit.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <!-- Stats Widget ****************** -->
+  <!-- Affiliate Disclosure -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="max-w-3xl mx-auto p-6 md:p-8 bg-gray-50 dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700">
+      <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading text-heading">How we make money</h2>
+      <div class="prose prose-lg max-w-none dark:prose-invert text-muted">
+        <p>
+          <strong>Transparency matters.</strong> This site is an affiliate partner of TrendTrack. When you use our
+          promo code <strong>WINNING</strong> or click our links to sign up, we may earn a commission — at no extra
+          cost to you.
+        </p>
+        <p>
+          This does not affect the discount you receive. You still get the full 20% off. The commission comes from
+          TrendTrack's side as a referral fee.
+        </p>
+        <p>
+          It also does not affect what we write. If TrendTrack has a limitation, we point it out. If a competitor is
+          better for a specific use case, we say so. Our long-term credibility is worth more than any single
+          commission.
+        </p>
+      </div>
+    </div>
+  </section>
 
-  <Stats
-    title="Our platform impact"
-    stats={[
-      { title: 'Deal Updates', amount: 'Daily' },
-      { title: 'Supported Tools', amount: '50+' },
-      { title: 'Active Coupons', amount: '100+' },
-      { title: 'User Focus', amount: 'Global' },
-    ]}
-  />
+  <!-- What We Are Not -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-2xl md:text-3xl font-bold mb-6 font-heading text-heading">What we are not</h2>
+      <ul class="space-y-4">
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 font-bold text-xl flex-shrink-0">✕</span>
+          <p class="text-muted">
+            <strong class="text-heading">We are not TrendTrack.</strong>
+            This is an independent site. We cannot access your TrendTrack account, process refunds, or change
+            subscription pricing. For account issues, contact
+            <a href="https://trendtrack.io" class="text-primary dark:text-blue-400 hover:underline">TrendTrack directly</a>.
+          </p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 font-bold text-xl flex-shrink-0">✕</span>
+          <p class="text-muted">
+            <strong class="text-heading">We are not a coupon aggregator.</strong>
+            We focus exclusively on TrendTrack. You will not find codes for 50 other tools here — just one tool,
+            covered properly.
+          </p>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-red-500 font-bold text-xl flex-shrink-0">✕</span>
+          <p class="text-muted">
+            <strong class="text-heading">We cannot guarantee codes forever.</strong>
+            Promo codes can expire or be revoked by TrendTrack at any time. We test ours regularly and update
+            the site if anything changes, but we do not control TrendTrack's pricing decisions.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </section>
 
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    title="What we offer"
-    subtitle="We focus on delivering high-quality, easy-to-use deal discovery experiences for users looking to save money on digital tools and subscriptions."
-    columns={3}
-    isBeforeContent={true}
-    items={[
-      {
-        title: 'Verified Promo Codes',
-        description:
-          'We collect and organize working promo codes and discount offers to help users avoid expired or invalid deals.',
-        icon: 'tabler:discount',
-      },
-      {
-        title: 'SaaS Discounts',
-        description:
-          'Find exclusive savings for popular SaaS tools, marketing platforms, AI tools, and productivity apps.',
-        icon: 'tabler:brand-producthunt',
-      },
-      {
-        title: 'Deal Updates',
-        description:
-          'We continuously update our database to ensure users always get access to the latest available offers.',
-        icon: 'tabler:refresh',
-      },
-    ]}
-  />
-
-  <!-- Features3 Widget ************** -->
-
-  <Features3
-    columns={3}
-    isAfterContent={true}
-    items={[
-      {
-        title: 'Marketing Tools',
-        description:
-          'Save on SEO, advertising, and growth tools used by marketers and entrepreneurs worldwide.',
-        icon: 'tabler:chart-line',
-      },
-      {
-        title: 'AI Tools',
-        description:
-          'Discover discounts on AI writing, image generation, and automation platforms.',
-        icon: 'tabler:robot',
-      },
-      {
-        title: 'Startup Tools',
-        description:
-          'Get early-stage startup tools at reduced prices for building and scaling faster.',
-        icon: 'tabler:rocket',
-      },
-      {
-        title: 'Creator Tools',
-        description:
-          'Discounts for content creators, designers, and video editors.',
-        icon: 'tabler:video',
-      },
-      {
-        title: 'Business Tools',
-        description:
-          'Save on CRM, analytics, and business management platforms.',
-        icon: 'tabler:briefcase',
-      },
-      {
-        title: 'E-commerce Tools',
-        description:
-          'Find deals for Shopify apps, dropshipping tools, and online store platforms.',
-        icon: 'tabler:shopping-cart',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=1740&q=80',
-      alt: 'Digital tools and analytics dashboard',
-    }}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Our mission"
-    subtitle="We believe software should be affordable and accessible. Our mission is to help users discover better deals and reduce the cost of essential digital tools."
-    items={[
-      {
-        title: 'Find the best deals',
-        description:
-          'We scan and organize promo codes from multiple sources to surface the most valuable offers.',
-      },
-      {
-        title: 'Save time and money',
-        description:
-          'Instead of searching across multiple websites, users can find everything in one place.',
-      },
-      {
-        title: 'Improve access to tools',
-        description:
-          'We help individuals and businesses access tools they need without overpaying.',
-      },
-    ]}
-  />
-
-  <!-- Steps2 Widget ****************** -->
-
-  <Steps2
-    title="Why choose TrendTrack"
-    subtitle="We focus on reliability, simplicity, and real value for users looking for discounts on digital products."
-    isReversed={true}
-    callToAction={{
-      text: 'Browse deals',
-      href: '/',
-    }}
-    items={[
-      {
-        title: 'Trusted deal curation',
-        description:
-          'We prioritize verified and relevant promo codes instead of spam or outdated offers.',
-        icon: 'tabler:shield-check',
-      },
-      {
-        title: 'Fast updates',
-        description:
-          'Our listings are regularly updated to reflect the latest promotions.',
-        icon: 'tabler:clock',
-      },
-      {
-        title: 'User-first experience',
-        description:
-          'We design everything with clarity and ease of use in mind.',
-        icon: 'tabler:user-heart',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Our focus categories"
-    tagline="What we cover"
-    columns={4}
-    items={[
-      {
-        title: 'AI Tools',
-        description: 'Discounts on AI writing, image, and automation tools.',
-      },
-      {
-        title: 'Marketing Software',
-        description: 'SEO, ads, analytics, and growth platforms.',
-      },
-      {
-        title: 'Creator Tools',
-        description: 'Design, video editing, and content creation tools.',
-      },
-      {
-        title: 'Business SaaS',
-        description: 'CRM, productivity, and management tools.',
-      },
-    ]}
-  />
-
-  <!-- Features2 Widget ************** -->
-
-  <Features2
-    title="Contact & Support"
-    tagline="Get in touch"
-    columns={2}
-    items={[
-      {
-        title: 'Email support',
-        description:
-          'For partnership, corrections, or promo code submissions, contact our team anytime.',
-        icon: 'tabler:mail',
-      },
-      {
-        title: 'Submit a deal',
-        description:
-          'Found a working coupon or deal? Share it with us and help the community save more.',
-        icon: 'tabler:gift',
-      },
-    ]}
-  />
+  <!-- CTA -->
+  <section class="max-w-4xl mx-auto px-4 sm:px-6 py-12 text-center">
+    <h2 class="text-2xl md:text-3xl font-bold mb-4 font-heading text-heading">Ready to save 20%?</h2>
+    <p class="text-muted mb-8 max-w-xl mx-auto">
+      Use code <strong>WINNING</strong> at checkout or click below to get started with TrendTrack at the discounted price.
+    </p>
+    <a
+      href="https://trendtrack.io?fpr=lanetrendtrack"
+      class="inline-block px-8 py-3 bg-[#9FE870] text-[#163300] font-bold rounded-lg hover:opacity-90 transition"
+    >
+      Claim 20% Off with WINNING →
+    </a>
+    <p class="mt-6">
+      <a href={getBlogPermalink()} class="text-primary dark:text-blue-400 hover:underline">Read our blog</a>
+      for in-depth TrendTrack guides and comparisons.
+    </p>
+  </section>
 </Layout>
