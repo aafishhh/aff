@@ -50,6 +50,7 @@ export const footerData = {
         { text: 'Alternatives', href: getPermalink('/alternatives') },
         { text: 'TrendTrack vs Minea', href: '/blog/trendtrack-vs-minea/' },
         { text: 'TrendTrack 20% Off', href: '/blog/trendtrack-20-off/' },
+        { text: 'Break Even ROAS Calculator', href: '/blog/break-even-roas-calculator/' },
         { text: 'Blog', href: getBlogPermalink() },
       ],
     },
