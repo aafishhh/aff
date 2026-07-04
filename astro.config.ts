@@ -50,7 +50,7 @@ export default defineConfig({
           item.lastmod = new Date();
         }
         // Key conversion pages
-        else if (url.includes('/pricing/') || url.includes('/alternatives/')) {
+        else if (url.includes('/alternatives/')) {
           item.priority = 0.8;
           item.changefreq = 'monthly';
           item.lastmod = new Date();
