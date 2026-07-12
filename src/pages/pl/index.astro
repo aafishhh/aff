@@ -1,0 +1,569 @@
+---
+import PageLayout from '~/layouts/PageLayout.astro';
+
+import Hero from '~/components/widgets/Hero.astro';
+import Note from '~/components/widgets/Note.astro';
+import Features from '~/components/widgets/Features.astro';
+import Prices from '~/components/widgets/Pricing.astro';
+import Testimonials from '~/components/widgets/Testimonials.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+import { headerDataPL, footerDataPL } from '~/navigation';
+
+const metadata = {
+  title: 'Kod Rabatowy TrendTrack: WINNING - 20% rabatu w 2026',
+  description: 'Zweryfikowany kod rabatowy TrendTrack WINNING - 20% rabatu na wszystkie plany w 2026. Zaoszczedz na platformie do analizy e-commerce N1 z naszym przetestowanym kodem promocyjnym.',
+  ignoreTitleTemplate: true,
+  canonical: 'https://trendtrackpromocode.com/pl/',
+  hrefLang: [
+    { lang: 'en', href: 'https://trendtrackpromocode.com/' },
+    { lang: 'fr', href: 'https://trendtrackpromocode.com/fr/' },
+    { lang: 'pl', href: 'https://trendtrackpromocode.com/pl/' },
+    { lang: 'x-default', href: 'https://trendtrackpromocode.com/' },
+  ],
+  jsonLd: {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: [
+      {
+        '@type': 'Question',
+        name: 'Jaki jest najlepszy kod rabatowy TrendTrack dostepny obecnie?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Najlepszym kodem rabatowym TrendTrack obecnie jest WINNING, ktory oferuje dozywotni rabat 20% na wszystkie plany inteligencji e-commerce premium.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Jak uzyc kodu rabatowego TrendTrack?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Aby zastosowac kod rabatowy TrendTrack, wybierz plan subskrypcji na oficjalnej stronie, przejdz do ekranu platnosci i wpisz kod rabatowy w polu "Kod rabatowy". Kwota calkowita zostanie zmniejszona o 20% natychmiast.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy moge uzyc kodu rabatowego TrendTrack z darmowym rozszerzeniem Chrome?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Rozszerzenie Chrome jest w 100% darmowe i nie wymaga kodu rabatowego. Jednakze, gdy zdecydujesz sie na przejscie na panel premium w celu glebszego badania sklepow konkurencji, mozesz zastosowac kod rabatowy TrendTrack, aby uzyskac zniżke.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy te kody rabatowe obowiazuja na plany roczne?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tak! Mozesz polaczyc zniżke roczna (juz uwzgledniona w opcji platnosci rocznej) z kodem rabatowym TrendTrack, aby zmaksymalizowac oszczednosci na narzedziach do badania konkurencji.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Dlaczego moj kod rabatowy TrendTrack wyswietla "nieprawidlowy"?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Jesli kod rabatowy TrendTrack jest oznaczony jako nieprawidlowy, sprawdz pisownie i wielkosc liter. Kody rabatowe sa wrazliwe na wielkosc liter i musza byc wpisywane wielkimi literami (np. WINNING zamiast winning). Jesli kod nadal jest nieprawidlowy, mogl wygasnac i powiniene sprobowac alternatywnego kodu.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy istnieje gwarancja zwrotu pieniedzy z kodem rabatowym TrendTrack?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Wszystkie subskrypcje TrendTrack, w tym te kupione z kodem rabatowym TrendTrack, podlegaja standardowym politykom zwrotow TrendTrack.io. Prosze zapoznac sie z ich oficjalnymi warunkami uzytkowania, aby uzyskac wiecej informacji.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Jak czesto kody rabatowe TrendTrack sa aktualizowane?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Regularnie monitorujemy i weryfikujemy kody rabatowe TrendTrack, aby upewnic sie, ze pozostaja aktywne i wazne. Nowe kody sa zazwyczaj publikowane podczas wyprzedazy sezonowych, premier produktow i specjalnych wydarzen promocyjnych. Dodaj te strone do zakladek i sprawdzaj regularnie, aby znalexc najnowsze dzialajace kody.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy moge uzyc kilku kodow rabatowych TrendTrack jednoczesnie?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Nie, TrendTrack zezwala tylko na jeden kod rabatowy na transakcje. Jesli masz kilka kodow, wybierz ten, ktory oferuje najwyzsza zniżke. Obecnie kod WINNING oferuje staly rabat 20%, co jest najlepsza dostepna oferta.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy bezpieczne jest uzywanie kodu rabatowego WINNING?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tak. Dopoki kod jest uzyskany z oficjalnych lub zaufanych zrodel, jest bezpieczny w uzytkowaniu i nie wplynie na twoje konto ani bezpieczenstwo platnosci.',
+        },
+      },
+      {
+        '@type': 'Question',
+        name: 'Czy TrendTrack oferuje darmowy okres probny lub darmowy plan?',
+        acceptedAnswer: {
+          '@type': 'Answer',
+          text: 'Tak, TrendTrack oferuje darmowe rozszerzenie Chrome, ktore zapewnia podstawowe funkcje inspekcji sklepow bez kosztow. Do pelnego dostepu do sledzenia przychodow, inteligencji reklamowej i zaawansowanych analiz wymagana jest platna subskrypcja. Mozesz uzyc kodu rabatowego TrendTrack, aby zmniejszyc koszt dowolnego platnego planu.',
+        },
+      },
+    ],
+  },
+};
+---
+
+<PageLayout metadata={metadata} headerData={headerDataPL} footerData={footerDataPL}>
+
+<!-- Kod Rabatowy (Hero Widget) ******************* -->
+
+<section id="promo-code">
+<Hero>
+  <Fragment slot="title">
+    <span class="block mb-4">Kod Rabatowy TrendTrack</span>
+    <span class="block text-4xl md:text-6xl font-bold">
+      <span
+        class="inline-block px-3 py-1 rounded-sm"
+        style="background-color: #9FE870; color: #163300;"
+      >
+        WINNING
+      </span>
+      - 20% rabatu
+    </span>
+  </Fragment>
+
+<Fragment slot="subtitle">
+  Kod Rabatowy TrendTrack: WINNING - Zweryfikowany kod na 20% rabatu w 2026. Uzyskaj dostep do platformy do analizy e-commerce N1 dla Twojego kolejnego sukcesu.
+</Fragment>
+
+<Fragment slot="actions">
+    <!-- Karta promocyjna -->
+    <div class="mt-8 border border-[#9FE870] rounded-[20px] p-8 bg-white dark:bg-gray-800 shadow-geist w-[300px] mx-auto">
+      <p class="text-[12px] font-bold text-muted uppercase tracking-widest">Ekskluzywny kod rabatowy</p>
+
+      <!-- WINNING -->
+      <h2 class="text-[50px] font-extrabold text-[#163300] my-3 leading-none tracking-tight">WINNING</h2>
+
+      <p class="text-[16px] font-medium text-muted mb-6">20% rabatu na wszystkie plany</p>
+
+      <!-- Przycisk kopiuj -->
+      <button
+        onclick="navigator.clipboard.writeText('WINNING'); alert('Kod skopiowany!')"
+        class="w-full py-2 mb-3 border border-gray-400 dark:border-gray-500 rounded-[8px] text-[16px] font-semibold hover:bg-gray-100 dark:hover:bg-gray-700 hover:border-gray-500 transition cursor-pointer"
+      >
+        Skopiuj kod WINNING
+      </button>
+
+      <!-- Przycisk aktywuj -->
+      <a
+        href="https://trendtrack.io?fpr=lanetrendtrack"
+        target="_blank"
+        rel="sponsored noopener noreferrer"
+        class="block w-full py-2 bg-[#9FE870] text-[#163300] font-bold text-[16px] text-center rounded-[8px] hover:opacity-90 transition"
+      >
+        Aktywuj rabat ->
+      </a>
+
+      <div class="flex items-center justify-between pt-6 border-t border-gray-100 dark:border-gray-700">
+              <div class="flex items-center gap-2 text-muted text-[14px]">
+                <span>📋</span> 109 skopiowan dzis
+              </div>
+              <div class="flex items-center border border-gray-200 dark:border-gray-600 rounded-lg px-3 py-1">
+                <span class="text-[16px]">👍</span>
+                <span class="text-[14px] font-bold text-heading ml-1">88</span>
+              </div>
+            </div>
+          </div>
+  </Fragment>
+</Hero>
+</section>
+
+  <!-- Note Widget ******************* -->
+
+  <Note title="Specjalna oferta:" description="Uzyj aktywnego kodu rabatowego TrendTrack 'WINNING', aby zaoszczedzic 20% dozywotnio na wszystkich planach miesiecznych i rocznych." />
+
+  <!-- Co to jest TrendTrack ******************* -->
+
+  <section id="what-is-trendtrack" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
+    <div class="max-w-4xl mx-auto">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm text-center">Przeglad</p>
+      <h2 class="text-3xl font-bold mt-2 mb-6 text-center text-heading">Co to jest TrendTrack?</h2>
+      <div class="prose prose-lg max-w-none dark:prose-invert">
+        <p class="text-muted">
+          TrendTrack to kompleksowa platforma inteligencji e-commerce zaprojektowana, aby pomóc sprzedawcom online, dropshipperom i agencjom marketingowym zdobyc przewage konkurencyjna. Zalozona jako narzedzie do badania sklepow Shopify, ewoluowala w zintegrowany pakiet analiz, ktory sledzi ponad 12 milionow sklepow internetowych na calym swiecie.
+        </p>
+        <p class="text-muted">
+          Platforma laczy cztery glowne mozliwosci: <strong>inteligencje sklepu</strong> (szacunki przychodow, trendy ruchu, wykrywanie aplikacji), <strong>odkrywanie produktow</strong> (sledzenie bestsellerow, alerty o produktach trendujacych), <strong>analize kreacji reklamowych</strong> (biblioteki reklam Facebook, TikTok i Pinterest) oraz <strong>monitorowanie konkurencji</strong> (analiza lejkow, dekompozycja strategii cenowych). Uzytkownicy otrzymuja okno w czasie rzeczywistym na produkty, ktore sie sprzedaja, reklamy, ktore dzialaja, i struktury odnoszacych sukcesy sklepow.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Features Widget *************** -->
+
+  <Features
+    id="features"
+    tagline="Funkcje"
+    title="Dlaczego TrendTrack to narzedzie wyboru dla e-commerce?"
+    subtitle="TrendTrack to najpotężniejszy pakiet narzedzi inteligencji dla sklepow e-commerce, dropshipperow i agencji reklamowych. Odkryj, co mozesz odblokowac zniżka dzieki naszemu ekskluzywnemu kuponowi."
+    classes={{ headline: { title: 'whitespace-normal md:whitespace-nowrap' } }}
+    items={[
+      {
+        title: 'Dane rynkowe w czasie rzeczywistym',
+        description:
+          'Pokazuje, co jest obecnie trendujace w sklepach i produktach, abyś mogl zobaczyc szybkie zmiany w popycie i zachowaniu zakupowym. Pomaga to uzytkownikom wychwycic mozliwosci, zanim stana sie glownym nurtem.',
+        icon: 'tabler:brand-tailwind',
+      },
+      {
+        title: 'Analiza kreacji reklamowych',
+        description:
+          'Mozesz przegladac najskuteczniejsze reklamy i formaty kreacji, ktore sa obecnie emitowane w roznych niszach. Pomaga to uzytkownikom zrozumiec, jakie naglowki, wizualy i komunikaty generuja konwersje.',
+        icon: 'tabler:components',
+      },
+      {
+        title: 'Sledzenie wynikow sklepu',
+        description:
+          'Narzedzie umozliwia analizowanie odnoszacych sukcesy sklepow internetowych, w tym trendow ruchu i schematow wzrostu. To sprawia, ze badanie konkurencji jest bardziej ustrukturyzowane i latwiejsze do wykorzystania.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'Silnik odkrywania produktow',
+        description:
+          'Wyróznia najlepiej sprzedajace sie i najszybciej rosnace produkty w sklepach Shopify, pomagajac uzytkownikom zidentyfikowac potencjalne wygrane produkty do przetestowania lub rozwoju.',
+        icon: 'tabler:rocket',
+      },
+      {
+        title: 'Strategiczny widok konkurencji',
+        description:
+          'Uzytkownicy moga badac, jak inne marki strukturyzuja swoje lejki, ceny i strategie pozyskiwania klientow, oferujac jasniejszy obraz tego, jak działaja glówni gracze.',
+        icon: 'tabler:arrows-right-left',
+      },
+      {
+        title: 'Elastyczna i niezawodna inteligencja',
+        description:
+          'Jedna skonsolidowana platforma zastepuje wiele rozlacznych subskrypcji szpiegowskich. Zastosuj zweryfikowany kod rabatowy TrendTrack WINNING, aby zminimalizowac koszty narzedzi.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+<section id="how-it-works" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
+  <div class="text-center mb-12">
+    <p class="text-primary font-bold tracking-wide uppercase text-sm">Jak to działa</p>
+    <h2 class="text-3xl font-bold mt-2 text-heading">Jak uzyc kodu rabatowego TrendTrack</h2>
+  </div>
+
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+      <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">1</div>
+      <h3 class="font-bold text-lg mb-2 text-heading">Wybierz swoj plan</h3>
+      <p class="text-muted text-sm">Przegladaj oficjalne poziomy subskrypcji (Starter, Pro lub Business) i wybierz ten, ktory odpowiada Twoim potrzebom.</p>
+    </div>
+
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+      <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">2</div>
+      <h3 class="font-bold text-lg mb-2 text-heading">Zastosuj kod</h3>
+      <p class="text-muted text-sm">Skopiuj kupon <strong>WINNING</strong> i wklej go w polu "Kod rabatowy" podczas procesu platnosci.</p>
+    </div>
+
+    <div class="flex flex-col items-center text-center p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+      <div class="w-12 h-12 flex items-center justify-center bg-[#9FE870] text-[#163300] rounded-full font-bold text-xl mb-4">3</div>
+      <h3 class="font-bold text-lg mb-2 text-heading">Potwierdz i zaoszczedz!</h3>
+      <p class="text-muted text-sm">Sprawdz, czy rabat 20% jest odzwierciedlony w calkowitej kwocie, a nastepnie potwierdz subskrypcje.</p>
+    </div>
+
+  </div>
+</section>
+
+  <!-- Pricing Widget ******************* -->
+
+<section id="pricing">
+  <Prices
+    title="Cennik subskrypcji z rabatem"
+    subtitle="Zastosuj kod rabatowy TrendTrack WINNING, aby zaoszczedzic 20% na jednym ze standardowych cennikow ponizej."
+    prices={[
+      {
+        title: 'Plan Starter',
+        subtitle: 'Dla poczatkujacych w badaniu konkurencji',
+        price: 47.2,
+        period: 'Miesiecznie (z kuponem)',
+        items: [
+          {
+            description: 'Cena standardowa: 59 $/miesiac',
+          },
+          {
+            description: 'Dostep do inspektora sklepow Shopify',
+          },
+          {
+            description: 'Analiza biblioteki reklam konkurencji',
+          },
+          {
+            description: 'Wykrywanie aplikacji i motywow',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          rel: 'sponsored noopener noreferrer',
+          text: '- 20% KOD: WINNING',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
+      },
+      {
+        title: 'Plan Pro',
+        subtitle: 'Idealny dla aktywnych dropshipperow i marketerow',
+        price: 71.2,
+        period: 'Miesiecznie (z kuponem)',
+        items: [
+          {
+            description: 'Cena standardowa: 89 $/miesiac',
+          },
+          {
+            description: 'Pelne codzienne sledzenie sprzedazy sklepow',
+          },
+          {
+            description: 'Nielimitowane filtry wyszukiwania i analizy',
+          },
+          {
+            description: 'Zaawansowane metryki inteligencji reklamowej',
+          },
+          {
+            description: 'Priorytetowe opcje eksportu danych',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          rel: 'sponsored noopener noreferrer',
+          text: '- 20% KOD: WINNING',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
+        hasRibbon: true,
+        ribbonTitle: 'Najlepsza wartosc',
+      },
+      {
+        title: 'Plan Business',
+        subtitle: 'Optymalny dla agencji i rosnacych zespolow',
+        price: 119.2,
+        period: 'Miesiecznie (z kuponem)',
+        items: [
+          {
+            description: 'Cena standardowa: 149 $/miesiac',
+          },
+          {
+            description: 'Miejsca wielouzytkownikowe dla zespolow',
+          },
+          {
+            description: 'Dostep API do integracji automatyzacji',
+          },
+          {
+            description: 'Kompleksowe analizy nisz dropshippingowych',
+          },
+        ],
+        callToAction: {
+          target: '_blank',
+          rel: 'sponsored noopener noreferrer',
+          text: '- 20% KOD: WINNING',
+          href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        },
+      },
+    ]}
+  />
+</section>
+
+  <!-- Reviews (Testimonials Widget) *********** -->
+
+<section id="reviews">
+  <Testimonials
+    title="Co uzytkownicy mowia o swoich oszczednosciach"
+    subtitle="Przeczytaj zweryfikowane opinie dropshipperow, ktorzy uzyli kodu rabatowego TrendTrack, aby zoptymalizowac koszty narzedzi."
+    testimonials={[
+      {
+        testimonial: `Placilem ponad 150 $/miesiac za rozne narzedzia do inspekcji Shopify. Przejscie na TrendTrack.io pozwolilo mi duzo zaoszczedzic, zwlaszcza po zastosowaniu kodu rabatowego TrendTrack WINNING dla solidnego rabatu 20%. Szpiegowanie biblioteki reklamowej i logi produktow sa niesamowicie dokladne.`,
+        name: 'Jordan K.',
+        job: 'Przedsiebiorca dropshipping',
+        image: {
+          src: 'https://images.unsplash.com/photo-1618835962148-cf177563c6c0?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=930&q=80',
+          alt: 'Jordan K.',
+        },
+      },
+      {
+        testimonial: `Darmowe rozszerzenie Chrome jest niesamowite do sprawdzania motywow aplikacji, ale przejscie na plan Pro dalo nam sygnaly przychodow konkurencji, ktorych potrzebowalismy. Uzycie kodu rabatowego TrendTrack sprawilo, ze subskrypcja byla niezwykle oplacalna dla naszego zespolu dropshipping.`,
+        name: 'Sofia R.',
+        job: 'Wlasciciel marki e-commerce',
+        image: {
+          src: 'https://images.unsplash.com/photo-1561406636-b80293969660?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=774&q=80',
+          alt: 'Sofia R.',
+        },
+      },
+      {
+        testimonial: `Zastosowanie kodu rabatowego TrendTrack jest bardzo proste. Uzywalismy kodu WINNING i natychmiast otrzymalismy 20% rabatu. Mozliwosc sledzenia sygnalow przychodow, aktywnych kreacji reklamowych i aplikacji sklepu w jednym miejscu czyni to oczywistym wyborem.`,
+        name: 'Liam D.',
+        job: 'Specjalista w agencji reklamowej',
+        image: {
+          src: 'https://images.unsplash.com/photo-1545167622-3a6ac756afa4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=824&q=80',
+          alt: 'Liam D.',
+        },
+      },
+    ]}
+  />
+</section>
+
+  <!-- Dla kogo jest TrendTrack ******************* -->
+
+  <section id="who-is-it-for" class="max-w-[1200px] mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-10">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm">Przypadki uzycia</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Dla kogo jest TrendTrack?</h2>
+      <p class="text-muted mt-3 max-w-2xl mx-auto">TrendTrack sluzy szerokiemu spektrum profesjonalistow e-commerce. Oto jak rozne role korzystaja z platformy &mdash; oraz ze zniżki z kodu rabatowego.</p>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+        <div class="text-3xl mb-3">🛒</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Dropshipperzy</h3>
+        <p class="text-muted text-sm">Znajdz wygrane produkty przed konkurencja. Sledz sygnaly przychodow sklepow, identyfikuj trendujace artykuly i waliduj swoje pomysly na produkty prawdziwymi danymi zamiast domyslami.</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+        <div class="text-3xl mb-3">🏷️</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Wlasciciele marek</h3>
+        <p class="text-muted text-sm">Monitoruj ceny konkurencji, rotacje kreacji reklamowych i modele wzrostu sklepow. Zrozum, jak marki konkurencyjne pozyskuja klientow i dostosuj wlasna strategie.</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+        <div class="text-3xl mb-3">📊</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Agencje reklamowe</h3>
+        <p class="text-muted text-sm">Uzyskaj dostep do scentralizowanego panelu inteligencji dla wielu sklepow klientow. Wykorzystaj biblioteke reklam do tworzenia strategii kreacji opartych na danych i demonstruj ROI z konkretnymi benchmarkami konkurencji.</p>
+      </div>
+      <div class="p-6 bg-white dark:bg-gray-800/50 rounded-[20px] border border-gray-200 dark:border-gray-700 shadow-geist">
+        <div class="text-3xl mb-3">🔍</div>
+        <h3 class="font-bold text-lg mb-2 text-heading">Badacze rynku</h3>
+        <p class="text-muted text-sm">Badaj trendy nisz, stosy technologiczne sklepow i wyniki na poziomie kategorii. Eksportuj dane do glebszej analizy i twórz kompleksowe raporty rynkowe z pewnoscia.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ (FAQs Widget) ******************* -->
+
+<section id="faq">
+  <FAQs
+    title="Czesto zadawane pytania"
+    subtitle="Dowiedz sie wiecej, jak najlepiej wykorzystac zniżki z kodem rabatowym TrendTrack."
+    tagline="FAQ"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Jaki jest najlepszy kod rabatowy TrendTrack dostepny obecnie?',
+        description:
+          'Najlepszym kodem rabatowym TrendTrack obecnie jest WINNING, ktory oferuje dozywotni rabat 20% na wszystkie plany inteligencji e-commerce premium.',
+      },
+      {
+        title: 'Jak uzyc kodu rabatowego TrendTrack?',
+        description:
+          'Aby zastosowac kod rabatowy TrendTrack, wybierz plan subskrypcji na oficjalnej stronie, przejdz do ekranu platnosci i wpisz kod rabatowy w polu "Kod rabatowy". Kwota calkowita zostanie zmniejszona o 20% natychmiast.',
+      },
+      {
+        title: 'Czy moge uzyc kodu rabatowego TrendTrack z darmowym rozszerzeniem Chrome?',
+        description:
+          'Rozszerzenie Chrome jest w 100% darmowe i nie wymaga kodu rabatowego. Jednakze, gdy zdecydujesz sie na przejscie na panel premium w celu glebszego badania sklepow konkurencji, mozesz zastosowac kod rabatowy TrendTrack, aby uzyskac zniżke.',
+      },
+      {
+        title: 'Czy te kody rabatowe obowiazuja na plany roczne?',
+        description:
+          'Tak! Mozesz polaczyc zniżke roczna (juz uwzgledniona w opcji platnosci rocznej) z kodem rabatowym TrendTrack, aby zmaksymalizowac oszczednosci na narzedziach do badania konkurencji.',
+      },
+      {
+        title: 'Dlaczego moj kod rabatowy TrendTrack wyswietla "nieprawidlowy"?',
+        description:
+          'Jesli kod rabatowy TrendTrack jest oznaczony jako nieprawidlowy, sprawdz pisownie i wielkosc liter. Kody rabatowe sa wrazliwe na wielkosc liter i musza byc wpisywane wielkimi literami (np. WINNING zamiast winning). Jesli kod nadal jest nieprawidlowy, mogl wygasnac i powiniene sprobowac alternatywnego kodu.',
+      },
+      {
+        title: 'Czy istnieje gwarancja zwrotu pieniedzy z kodem rabatowym TrendTrack?',
+        description:
+          'Wszystkie subskrypcje TrendTrack, w tym te kupione z kodem rabatowym TrendTrack, podlegaja standardowym politykom zwrotow TrendTrack.io. Prosze zapoznac sie z ich oficjalnymi warunkami uzytkowania, aby uzyskac wiecej informacji.',
+      },
+      {
+        title: 'Jak czesto kody rabatowe TrendTrack sa aktualizowane?',
+        description:
+          'Regularnie monitorujemy i weryfikujemy kody rabatowe TrendTrack, aby upewnic sie, ze pozostaja aktywne i wazne. Nowe kody sa zazwyczaj publikowane podczas wyprzedazy sezonowych, premier produktow i specjalnych wydarzen promocyjnych. Dodaj te strone do zakladek i sprawdzaj regularnie, aby znalexc najnowsze dzialajace kody.',
+      },
+      {
+        title: 'Czy moge uzyc kilku kodow rabatowych TrendTrack jednoczesnie?',
+        description:
+          'Nie, TrendTrack zezwala tylko na jeden kod rabatowy na transakcje. Jesli masz kilka kodow, wybierz ten, ktory oferuje najwyzsza zniżke. Obecnie kod WINNING oferuje staly rabat 20%, co jest najlepsza dostepna oferta.',
+      },
+      {
+        title: 'Czy TrendTrack oferuje darmowy okres probny lub darmowy plan?',
+        description:
+          'Tak, TrendTrack oferuje darmowe rozszerzenie Chrome, ktore zapewnia podstawowe funkcje inspekcji sklepow bez kosztow. Do pelnego dostepu do sledzenia przychodow, inteligencji reklamowej i zaawansowanych analiz wymagana jest platna subskrypcja. Mozesz uzyc kodu rabatowego TrendTrack, aby zmniejszyc koszt dowolnego platnego planu.',
+      },
+    ]}
+  />
+</section>
+
+  <!-- Tabela kalkulatora oszczednosci ******************* -->
+
+  <section id="savings" class="max-w-4xl mx-auto px-4 sm:px-6 py-12">
+    <div class="text-center mb-8">
+      <p class="text-primary font-bold tracking-wide uppercase text-sm">Kalkulator oszczednosci</p>
+      <h2 class="text-3xl font-bold mt-2 text-heading">Ile zaoszczedzisz z kodem rabatowym</h2>
+      <p class="text-muted mt-3">Realne oszczednosci w dolarach, gdy zastosujesz kod <strong>WINNING</strong> przy platnosci.</p>
+    </div>
+    <div class="overflow-x-auto">
+      <table class="w-full text-sm border border-gray-200 dark:border-gray-700 rounded-[20px] overflow-hidden">
+        <thead>
+          <tr class="bg-gray-50 dark:bg-gray-800">
+            <th class="text-left px-4 py-3 font-bold text-heading">Plan</th>
+            <th class="text-right px-4 py-3 font-bold text-heading">Cena standardowa</th>
+            <th class="text-right px-4 py-3 font-bold text-heading">Z rabatem 20%</th>
+            <th class="text-right px-4 py-3 font-bold text-[#163300]">Oszczednosci miesieczne</th>
+            <th class="text-right px-4 py-3 font-bold text-[#163300]">Oszczednosci roczne</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-100 dark:divide-gray-700">
+          <tr>
+            <td class="px-4 py-3 font-semibold text-heading">Starter</td>
+            <td class="text-right px-4 py-3 text-muted">59 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-heading">47,20 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">11,80 $</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">141,60 $</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-semibold text-heading">Pro</td>
+            <td class="text-right px-4 py-3 text-muted">89 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-heading">71,20 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">17,80 $</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">213,60 $</td>
+          </tr>
+          <tr>
+            <td class="px-4 py-3 font-semibold text-heading">Business</td>
+            <td class="text-right px-4 py-3 text-muted">149 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-heading">119,20 $/miesiac</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">29,80 $</td>
+            <td class="text-right px-4 py-3 text-green-600 font-bold">357,60 $</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-center text-muted text-xs mt-4">
+      Wskazane oszczednosci sa oparte na rozliczeniu miesiecznym. Plany roczne moga oferowac dodatkowe zniżki na topie oszczednosci z kodu rabatowego.
+    </p>
+  </section>
+
+  <!-- CallToAction Widget *********** -->
+
+  <CallToAction
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Zaoszczedz 20% z WINNING',
+        href: 'https://trendtrack.io?fpr=lanetrendtrack',
+        target: '_blank',
+        rel: 'sponsored noopener noreferrer',
+      },
+    ]}
+  >
+    <Fragment slot="title">
+      Odnies sukces w e-commerce z 20% rabatem
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      Przestan zgadywac, co sprzedaje konkurencja. Skorzystaj z kodu rabatowego TrendTrack <span class="font-bold">WINNING</span>, aby uzyskac inteligencje premium na temat sklepow i reklam w najlepszej cenie.
+    </Fragment>
+  </CallToAction>
+</PageLayout>

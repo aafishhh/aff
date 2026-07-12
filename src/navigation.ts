@@ -153,3 +153,81 @@ export const footerDataFR = {
     © 2026 Code Promo TrendTrack. Tous droits reserves.
   `,
 };
+
+// ─── Polish navigation data ───────────────────────────────────
+export const headerDataPL = {
+  links: [
+    {
+      text: 'Kod Rabatowy',
+      href: '/pl/#promo-code',
+    },
+    {
+      text: 'Funkcje',
+      href: '/pl/#features',
+    },
+    {
+      text: 'Jak to dziala',
+      href: '/pl/#how-it-works',
+    },
+    {
+      text: 'Cennik',
+      href: '/pl/#pricing',
+    },
+    {
+      text: 'Opinie',
+      href: '/pl/#reviews',
+    },
+    {
+      text: 'FAQ',
+      href: '/pl/#faq',
+    },
+  ],
+  actions: [
+    { text: '20% rabatu z WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' },
+  ],
+};
+
+export const footerDataPL = {
+  links: [
+    {
+      title: 'Produkt',
+      links: [
+        { text: 'Kod Rabatowy', href: '/pl/#promo-code' },
+        { text: 'Funkcje', href: '/pl/#features' },
+        { text: 'Jak to dziala', href: '/pl/#how-it-works' },
+        { text: 'Cennik', href: '/pl/#pricing' },
+        { text: 'Opinie', href: '/pl/#reviews' },
+        { text: 'FAQ', href: '/pl/#faq' },
+      ],
+    },
+    {
+      title: 'Zasoby',
+      links: [
+        { text: 'Alternatywy', href: '/alternatives' },
+        { text: 'TrendTrack vs Minea', href: '/blog/trendtrack-vs-minea/' },
+        { text: 'TrendTrack 20% taniej', href: '/blog/trendtrack-20-off/' },
+        { text: 'Kalkulator ROAS', href: '/blog/break-even-roas-calculator/' },
+        { text: 'Blog', href: '/blog/' },
+      ],
+    },
+    {
+      title: 'O nas',
+      links: [
+        { text: 'Polityka prywatnosci', href: '/privacy' },
+        { text: 'Warunki korzystania', href: '/terms' },
+        { text: 'O nas', href: '/about' },
+        { text: 'Kontakt', href: '/contact' },
+      ],
+    },
+  ],
+  secondaryLinks: [
+    { text: 'Kod Rabatowy TrendTrack: WINNING - Zweryfikowany kod na 20% rabatu w 2026. Uzyskaj dostep do platformy do analizy e-commerce N1 dla Twojego kolejnego sukcesu.' },
+  ],
+  socialLinks: [
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/Trendtrack_io' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/trendtrack_io?igsh=dW14aW01MjA4bDI1' },
+  ],
+  footNote: `
+    © 2026 Kod Rabatowy TrendTrack. Wszelkie prawa zastrzezone.
+  `,
+};

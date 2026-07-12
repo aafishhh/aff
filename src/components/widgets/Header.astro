@@ -45,9 +45,22 @@ const {
 } = Astro.props;
 
 const currentPath = `/${trimSlash(new URL(Astro.url).pathname)}`;
-const isFR = currentPath.startsWith('/fr');
-const altLangUrl = isFR ? '/' : '/fr/';
-const altLangLabel = isFR ? 'EN' : 'FR';
+
+// Multi-language configuration
+interface LangOption {
+  code: string;
+  label: string;
+  path: string;
+}
+
+const allLangs: LangOption[] = [
+  { code: 'en', label: 'EN', path: '/' },
+  { code: 'fr', label: 'FR', path: '/fr/' },
+  { code: 'pl', label: 'PL', path: '/pl/' },
+];
+
+const currentLang = allLangs.find((l) => l.code !== 'en' && currentPath.startsWith(l.path)) || allLangs[0];
+const otherLangs = allLangs.filter((l) => l.code !== currentLang.code);
 ---
 
 <header
@@ -141,14 +154,29 @@ const altLangLabel = isFR ? 'EN' : 'FR';
       <div class="items-center flex justify-between w-full md:w-auto">
         <div class="flex items-center gap-1">
           {showToggleTheme && <ToggleTheme iconClass="w-6 h-6 md:w-5 md:h-5 md:inline-block" />}
-          <a
-            href={altLangUrl}
-            class="text-sm font-bold text-muted dark:text-gray-400 hover:text-heading dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg px-2.5 py-2 transition cursor-pointer border border-gray-200 dark:border-gray-700"
-            aria-label={`Switch to ${altLangLabel}`}
-            title={`Switch to ${altLangLabel}`}
-          >
-            {altLangLabel}
-          </a>
+          <div class="dropdown relative">
+            <button
+              type="button"
+              class="text-sm font-bold text-muted dark:text-gray-400 hover:text-heading dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg px-2.5 py-2 transition cursor-pointer border border-gray-200 dark:border-gray-700 flex items-center gap-1"
+              aria-label="Switch language"
+            >
+              {currentLang.label}
+              <Icon name="tabler:chevron-down" class="w-3 h-3" />
+            </button>
+            <ul class="dropdown-menu md:backdrop-blur-md dark:md:bg-dark rounded md:absolute right-0 md:hidden font-medium md:bg-white/90 md:min-w-[80px] drop-shadow-xl z-50">
+              {otherLangs.map((lang) => (
+                <li>
+                  <a
+                    href={lang.path}
+                    class="first:rounded-t last:rounded-b md:hover:bg-gray-100 hover:text-link dark:hover:text-white dark:hover:bg-gray-700 py-2 px-4 block whitespace-nowrap text-center text-sm"
+                    aria-label={`Switch to ${lang.label}`}
+                  >
+                    {lang.label}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
           {
             showRssFeed && (
               <a

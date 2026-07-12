@@ -3,8 +3,16 @@ import { SITE } from 'astrowind:config';
 
 const currentPath = new URL(Astro.url).pathname;
 const isFR = currentPath.startsWith('/fr');
-const homeUrl = isFR ? '/fr/' : '/';
-const logoText = isFR ? 'Code Promo TrendTrack' : 'TrendTrack Promo Code';
+const isPL = currentPath.startsWith('/pl');
+let homeUrl = '/';
+let logoText = 'TrendTrack Promo Code';
+if (isFR) {
+  homeUrl = '/fr/';
+  logoText = 'Code Promo TrendTrack';
+} else if (isPL) {
+  homeUrl = '/pl/';
+  logoText = 'Kod Rabatowy TrendTrack';
+}
 ---
 
 <a href={homeUrl} class="flex items-center -ml-0">
