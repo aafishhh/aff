@@ -24,6 +24,23 @@ export interface Props {
 }
 
 const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme = 'light' } = Astro.props;
+
+// Multi-language configuration for footer
+interface LangOption {
+  code: string;
+  label: string;
+  path: string;
+}
+
+const allLangs: LangOption[] = [
+  { code: 'en', label: 'EN', path: '/' },
+  { code: 'fr', label: 'FR', path: '/fr/' },
+  { code: 'pl', label: 'PL', path: '/pl/' },
+  { code: 'es', label: 'ES', path: '/es/' },
+];
+
+const currentPath = new URL(Astro.url).pathname;
+const currentLang = allLangs.find((l) => l.code !== 'en' && currentPath.startsWith(l.path)) || allLangs[0];
 ---
 
 <footer class:list={[{ dark: theme === 'dark' }, 'relative border-t border-gray-200 dark:border-slate-800 not-prose']}>
@@ -95,6 +112,24 @@ const { socialLinks = [], secondaryLinks = [], links = [], footNote = '', theme 
           ''
         )
       }
+
+      <div class="flex items-center gap-2 mb-4 md:mb-0">
+        {allLangs.map((lang) => (
+          lang.code === currentLang.code ? (
+            <span class="text-sm font-bold text-heading dark:text-white bg-gray-100 dark:bg-gray-700 rounded-lg px-2.5 py-1.5 border border-gray-300 dark:border-gray-600 cursor-default">
+              {lang.label}
+            </span>
+          ) : (
+            <a
+              href={lang.path}
+              class="text-sm text-muted dark:text-gray-400 hover:text-heading dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg px-2.5 py-1.5 transition border border-transparent hover:border-gray-200 dark:hover:border-gray-700"
+              aria-label={`Switch to ${lang.label}`}
+            >
+              {lang.label}
+            </a>
+          )
+        ))}
+      </div>
 
       <div class="text-sm mr-4 dark:text-muted">
         <Fragment set:html={footNote} />
