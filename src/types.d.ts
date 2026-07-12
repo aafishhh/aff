@@ -42,6 +42,7 @@ export interface MetaData {
   ignoreTitleTemplate?: boolean;
 
   canonical?: string;
+  hrefLang?: Array<{ lang: string; href: string }>;
 
   robots?: MetaDataRobots;
 

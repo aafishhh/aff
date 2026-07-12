@@ -75,3 +75,81 @@ export const footerData = {
     © 2026 TrendTrack Promo Code. All rights reserved.
   `,
 };
+
+// ─── French navigation data ───────────────────────────────────
+export const headerDataFR = {
+  links: [
+    {
+      text: 'Code Promo',
+      href: '/fr/#promo-code',
+    },
+    {
+      text: 'Fonctionnalites',
+      href: '/fr/#features',
+    },
+    {
+      text: 'Comment ca marche',
+      href: '/fr/#how-it-works',
+    },
+    {
+      text: 'Tarifs',
+      href: '/fr/#pricing',
+    },
+    {
+      text: 'Avis',
+      href: '/fr/#reviews',
+    },
+    {
+      text: 'FAQ',
+      href: '/fr/#faq',
+    },
+  ],
+  actions: [
+    { text: '20% de remise avec WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' },
+  ],
+};
+
+export const footerDataFR = {
+  links: [
+    {
+      title: 'Produit',
+      links: [
+        { text: 'Code Promo', href: '/fr/#promo-code' },
+        { text: 'Fonctionnalites', href: '/fr/#features' },
+        { text: 'Comment ca marche', href: '/fr/#how-it-works' },
+        { text: 'Tarifs', href: '/fr/#pricing' },
+        { text: 'Avis', href: '/fr/#reviews' },
+        { text: 'FAQ', href: '/fr/#faq' },
+      ],
+    },
+    {
+      title: 'Ressources',
+      links: [
+        { text: 'Alternatives', href: '/alternatives' },
+        { text: 'TrendTrack vs Minea', href: '/blog/trendtrack-vs-minea/' },
+        { text: 'TrendTrack 20% Off', href: '/blog/trendtrack-20-off/' },
+        { text: 'Calculateur ROAS', href: '/blog/break-even-roas-calculator/' },
+        { text: 'Blog', href: '/blog/' },
+      ],
+    },
+    {
+      title: 'A propos',
+      links: [
+        { text: 'Politique de confidentialite', href: '/privacy' },
+        { text: "Conditions d'utilisation", href: '/terms' },
+        { text: 'A propos de nous', href: '/about' },
+        { text: 'Contactez-nous', href: '/contact' },
+      ],
+    },
+  ],
+  secondaryLinks: [
+    { text: "Code Promo TrendTrack : WINNING - Obtenez 20% de reduction verifies en 2026. Accedez a la plateforme d'analyse e-commerce N deg 1 pour votre prochaine reussite." },
+  ],
+  socialLinks: [
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/Trendtrack_io' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/trendtrack_io?igsh=dW14aW01MjA4bDI1' },
+  ],
+  footNote: `
+    © 2026 Code Promo TrendTrack. Tous droits reserves.
+  `,
+};

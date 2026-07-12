@@ -23,6 +23,7 @@ const {
   openGraph = {},
   twitter = {},
   jsonLd,
+  hrefLang,
 } = Astro.props;
 
 const mergedOg: MetaDataOpenGraph = merge(
@@ -142,6 +143,10 @@ const allSchemas = [organizationSchema, websiteSchema, ...pageSchemas];
 ---
 
 <SEO {...seoProps} />
+
+{hrefLang && Array.isArray(hrefLang) && hrefLang.map(({ lang, href }) => (
+  <link rel="alternate" hreflang={lang} href={href} />
+))}
 
 {allSchemas.map((schema) => (
   <script type="application/ld+json" set:html={JSON.stringify(schema)} />
