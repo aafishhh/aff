@@ -2,17 +2,16 @@
 import { SITE } from 'astrowind:config';
 
 const currentPath = new URL(Astro.url).pathname;
-const isFR = currentPath.startsWith('/fr');
-const isPL = currentPath.startsWith('/pl');
-let homeUrl = '/';
-let logoText = 'TrendTrack Promo Code';
-if (isFR) {
-  homeUrl = '/fr/';
-  logoText = 'Code Promo TrendTrack';
-} else if (isPL) {
-  homeUrl = '/pl/';
-  logoText = 'Kod Rabatowy TrendTrack';
-}
+
+// Language-aware logo text and home URL
+const langMap: Record<string, { text: string; home: string }> = {
+  '/fr': { text: 'Code Promo TrendTrack', home: '/fr/' },
+  '/pl': { text: 'Kod Rabatowy TrendTrack', home: '/pl/' },
+  '/es': { text: 'Cupón TrendTrack', home: '/es/' },
+};
+
+const langKey = Object.keys(langMap).find((prefix) => currentPath.startsWith(prefix));
+const { text: logoText, home: homeUrl } = langKey ? langMap[langKey] : { text: 'TrendTrack Promo Code', home: '/' };
 ---
 
 <a href={homeUrl} class="flex items-center -ml-0">

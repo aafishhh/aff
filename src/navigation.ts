@@ -231,3 +231,81 @@ export const footerDataPL = {
     © 2026 Kod Rabatowy TrendTrack. Wszelkie prawa zastrzezone.
   `,
 };
+
+// ─── Spanish navigation data ───────────────────────────────────
+export const headerDataES = {
+  links: [
+    {
+      text: 'Cupón',
+      href: '/es/#promo-code',
+    },
+    {
+      text: 'Características',
+      href: '/es/#features',
+    },
+    {
+      text: 'Cómo funciona',
+      href: '/es/#how-it-works',
+    },
+    {
+      text: 'Precios',
+      href: '/es/#pricing',
+    },
+    {
+      text: 'Reseñas',
+      href: '/es/#reviews',
+    },
+    {
+      text: 'FAQ',
+      href: '/es/#faq',
+    },
+  ],
+  actions: [
+    { text: '20% de descuento con WINNING →', href: 'https://trendtrack.io?fpr=lanetrendtrack', variant: 'primary' },
+  ],
+};
+
+export const footerDataES = {
+  links: [
+    {
+      title: 'Producto',
+      links: [
+        { text: 'Cupón', href: '/es/#promo-code' },
+        { text: 'Características', href: '/es/#features' },
+        { text: 'Cómo funciona', href: '/es/#how-it-works' },
+        { text: 'Precios', href: '/es/#pricing' },
+        { text: 'Reseñas', href: '/es/#reviews' },
+        { text: 'FAQ', href: '/es/#faq' },
+      ],
+    },
+    {
+      title: 'Recursos',
+      links: [
+        { text: 'Alternativas', href: '/alternatives' },
+        { text: 'TrendTrack vs Minea', href: '/blog/trendtrack-vs-minea/' },
+        { text: 'TrendTrack 20% descuento', href: '/blog/trendtrack-20-off/' },
+        { text: 'Calculadora ROAS', href: '/blog/break-even-roas-calculator/' },
+        { text: 'Blog', href: '/blog/' },
+      ],
+    },
+    {
+      title: 'Acerca de',
+      links: [
+        { text: 'Política de privacidad', href: '/privacy' },
+        { text: 'Términos de servicio', href: '/terms' },
+        { text: 'Sobre nosotros', href: '/about' },
+        { text: 'Contáctanos', href: '/contact' },
+      ],
+    },
+  ],
+  secondaryLinks: [
+    { text: 'Cupón TrendTrack: WINNING - Obtén un 20% de descuento verificado en 2026. Accede a la plataforma de análisis e-commerce Nº1 para tu próximo gran éxito.' },
+  ],
+  socialLinks: [
+    { ariaLabel: 'X', icon: 'tabler:brand-x', href: 'https://x.com/Trendtrack_io' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/trendtrack_io?igsh=dW14aW01MjA4bDI1' },
+  ],
+  footNote: `
+    © 2026 Cupón TrendTrack. Todos los derechos reservados.
+  `,
+};

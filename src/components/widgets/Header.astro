@@ -57,6 +57,7 @@ const allLangs: LangOption[] = [
   { code: 'en', label: 'EN', path: '/' },
   { code: 'fr', label: 'FR', path: '/fr/' },
   { code: 'pl', label: 'PL', path: '/pl/' },
+  { code: 'es', label: 'ES', path: '/es/' },
 ];
 
 const currentLang = allLangs.find((l) => l.code !== 'en' && currentPath.startsWith(l.path)) || allLangs[0];
